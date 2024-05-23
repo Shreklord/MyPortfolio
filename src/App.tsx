@@ -1,12 +1,15 @@
-import './App.css'
+import "./App.css";
+import MainBackground from "./MainBackground";
+import NavigationBar from "./NavigationBar";
 
 function App() {
-
   return (
     <div>
-      My name is Anthony
+      <NavigationBar />
+      <MainBackground />
+      
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
