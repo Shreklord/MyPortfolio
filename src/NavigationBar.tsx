@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 
-function NavigationBar() {
-  const [activeTab, setActiveTab] = useState("Home");
+type NavigationBarProps = {
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
+};
 
-  const tabs: string[] = [
-    "Home",
-    "About Me",
-    "Experience",
-    "Github",
-    "Contact",
-    "Resume",
-  ];
+const tabs: string[] = [
+  "Home",
+  "About Me",
+  "Experience",
+  "GitHub",
+  "Contact",
+  "Resume",
+];
 
+function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
   const handleTabClick = (tab: string) => {
     setActiveTab(tab);
   };

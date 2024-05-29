@@ -8,7 +8,7 @@
   /* padding-left: 32px; */
   /* padding-right: 32px; */
   justify-content: space-between;
-  border-bottom: 4px solid #67d45e;
+  border-bottom: 4px solid      ;
 }
 
 .name_column {
@@ -53,9 +53,90 @@
 
 .main-background {
     width: 100%;
-    height: 819px; 
+    max-height: calc(100vh - 100px );
+    height: calc(100vh - 100px );
     background-image: url('/src/assets/Images/Wave.png'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
+
+.home_header1 {
+  margin: 0px;
+  font-size: 60px;
+  padding-bottom: 15px;
+  /* padding-top: 350px; */
+  /* padding-left: 10%; */
+  color: white;
+}
+
+.home_text1 {
+  margin: 0px;
+  font-size: 30px;
+  padding-bottom: 0px;
+  /* padding-top: 20px; */
+  /* padding-left: 10%; */
+  color: #b1aeae;
+}
+
+.home_text1_1 {
+  margin: 0px;
+  font-size: 30px;
+  padding-bottom: 10px;
+  /* padding-top: 20px; */
+  /* padding-left: 10%; */
+  color: #b1aeae;
+}
+
+.home_text2 {
+  margin: 0px;
+  padding-top: 30px;
+  font-size: 20px;
+  /* padding-top: 25px; */
+  /* padding-left: 10%; */
+  color: #DBD4D4;
+}
+
+.home_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 150px 200px 0px 200px;
+}
+
+.experience_button{
+  display: inline-block;
+  margin-top: 125px;
+  height: 100px;
+  width: 400px;
+  font-size: 40px;
+  font-weight: 600;
+  border: none;
+  color: black;
+  background-color: #67d45e;
+  border-radius: 40px;
+  cursor: pointer;
+  border: 4px double black;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  
+  
+  
+
+}
+
+.experience_button:hover{
+  background-color: darkgreen;
+}
+
+.home_goldhammer_image{
+  background-image: url('/src/assets/Images/Goldhammer.png'); 
+  width: 600px;
+  height: 650px;
+  background-size: cover;
+  /* margin-right: 150px;
+  margin-top: -150px; */
+  background-repeat: no-repeat;
+}
