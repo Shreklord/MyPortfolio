@@ -51,6 +51,26 @@
   cursor: pointer;
 }
 
+/* Media query for small screens */
+@media (max-width: 768px) {
+  body, html {
+    overflow: auto; /* Allow scrolling on smaller screens */
+  }
+
+  .main-background {
+    height: auto; /* Allow height to adjust based on content */
+    min-height: calc(100vh - 80px); /* Ensure minimum height covers full viewport minus nav bar */
+    padding-top: 20px; /* Optional: Adjust padding if needed */
+    overflow: visible; /* Allow scrolling if content overflows */
+  }
+
+  .experience_button {
+    width: 90%; /* Adjust button width for small screens */
+    height: auto; /* Adjust button height if necessary */
+    font-size: 30px; /* Adjust font size for small screens */
+  }
+}
+
 .main-background {
     width: 100%;
     max-height: calc(100vh - 100px );
@@ -100,8 +120,37 @@
 .home_row {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   padding: 150px 200px 0px 200px;
+  gap: 20px; /* Adjust the gap between columns as needed */
+}
+
+.home_column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: left; /* Center content vertically within the column */
+}
+
+@media (max-width: 768px) {
+  .home_row {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Adjust padding for small screens */
+  }
+  .home_column,
+  .home_column2 {
+    width: 100%; /* Make columns take full width */
+    align-items: left; /* Center content horizontally within the column */
+  }
+}
+
+.home_column2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content vertically within the column */
 }
 
 .experience_button{
@@ -121,10 +170,6 @@
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
-  
-  
-  
-
 }
 
 .experience_button:hover{
@@ -139,4 +184,37 @@
   /* margin-right: 150px;
   margin-top: -150px; */
   background-repeat: no-repeat;
+}
+
+.contact_header{
+  padding-top: 100px;
+  font-size: 100px;
+}
+
+
+
+.contact_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 225px 200px 0px 250px;
+}
+
+.image_row {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;  */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.contact_header {
+  margin: 0px;
+  font-size: 60px;
+  padding-bottom: 15px;
+  /* padding-top: 350px; */
+  /* padding-left: 10%; */
+  color: white;
 }

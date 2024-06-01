@@ -19,8 +19,11 @@ function HomeContent({ activeTab, setActiveTab }: HomeContentProps){
             <h2 className="home_text2">Lets get Started.</h2>
             <button className="experience_button" onClick={() => handleButtonClick("Experience")}>Experience</button>
         </div>
-        <div className="home_goldhammer_image">
-
+        <div className="home_column2">
+          <div className="home_goldhammer_image">
+        </div>
+      
+        
         </div>
     </div>
     );
