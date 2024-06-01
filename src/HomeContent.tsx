@@ -11,6 +11,7 @@ function HomeContent({ activeTab, setActiveTab }: HomeContentProps){
       };
 
     return (
+      
     <div className="home_row">
         <div className="home_column">
             <h1 className="home_header1">Hey, Im Anthony Goldhammer</h1>
