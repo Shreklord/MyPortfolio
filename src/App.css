@@ -1,7 +1,7 @@
 body, html {
   margin: 0;
   height: 100%;
-  overflow: hidden; /* Prevent scrolling on the body */
+  overflow: hidden;
 }
 
 .nav_row {
@@ -65,16 +65,16 @@ body, html {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1; /* Ensure the background is behind the content */
+    z-index: -1;
 }
 
 .content {
     position: absolute;
-    top: 80px; /* Adjust based on your navbar height */
+    top: 80px;
     bottom: 0;
     left: 0;
     right: 0;
-    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-y: auto;
 }
 
 .home_header1 {
@@ -121,19 +121,6 @@ body, html {
   align-items: left;
 }
 
-@media (max-width: 768px) {
-  .home_row {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  .home_column,
-  .home_column2 {
-    width: 100%;
-    align-items: left;
-  }
-}
-
 .home_column2 {
   flex: 1;
   display: flex;
@@ -172,6 +159,16 @@ body, html {
   background-repeat: no-repeat;
 }
 
+.about_me_image{
+  background-image: url('src/assets/Images/HeadShotAnthony.jpg'); 
+  width: 600px;
+  height: 750px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 20px solid #555;
+  
+}
+
 .contact_header{
   padding-top: 100px;
   font-size: 100px;
@@ -195,4 +192,120 @@ body, html {
   font-size: 60px;
   padding-bottom: 15px;
   color: white;
+}
+
+.aboutme_header1{
+  margin: 0px;
+  margin-bottom: 10px;
+  font-size: 60px;
+  padding-bottom: 15px;
+  color: white;
+}
+
+.experience_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 300px 200px 0px 200px;
+  gap: 30px; 
+}
+
+.experience_column1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.experience_column2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.experience_column3 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.expereince_header1 {
+  padding-bottom: 40px;
+  font-size: 60px;
+  color: white;
+}
+
+.experience_title1 {
+  margin: 0px;
+  font-size: 30px;
+  padding-bottom: 0px;
+  color: #b1aeae;
+}
+
+.experience_title2{
+  margin: 0px;
+  padding-top: 240px;
+  font-size: 30px;
+  padding-bottom: 0px;
+  color: #b1aeae;
+}
+
+.experience_title3{
+  padding-top: 30px;
+  margin: 0px;
+  font-size: 30px;
+  padding-bottom: 0px;
+  color: #b1aeae;
+}
+
+.experience_spencers1 {
+  margin: 0px;
+  padding-top: 30px;
+  font-size: 20px;
+  color: #DBD4D4;
+}
+.experience_spencers2 {
+  margin: 0px;
+  padding-top: 30px;
+  font-size: 20px;
+  color: #DBD4D4;
+}
+.experience_spencers3 {
+  margin: 0px;
+  padding-top: 30px;
+  font-size: 20px;
+  color: #DBD4D4;
+}
+
+.experience_sclpt1 {
+  margin: 0px;
+  padding-top: 30px;
+  font-size: 20px;
+  color: #DBD4D4;
+}
+.experience_sclpt2 {
+  margin: 0px;
+  padding-top: 30px;
+  font-size: 20px;
+  color: #DBD4D4;
+}
+.experience_sclpt3 {
+  margin: 0px;
+  padding-top: 30px;
+  font-size: 20px;
+  color: #DBD4D4;
+}
+.experience_sclpt4 {
+  margin: 0px;
+  padding-top: 30px;
+  font-size: 20px;
+  color: #DBD4D4;
+}
+
+.experience_uofsc1 {
+  margin: 0px;
+  padding-top: 30px;
+  font-size: 20px;
+  color: #DBD4D4;
 }
