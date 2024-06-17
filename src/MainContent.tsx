@@ -1,6 +1,6 @@
-import React from "react";
-import background from "src/assets/Images/Wave.png";
-import NavigationBar from "./NavigationBar";
+// import React from "react";
+// import background from "src/assets/Images/Wave.png";
+// import NavigationBar from "./NavigationBar";
 import HomeContent from "./HomeContent";
 import ContactContent from "./ContactContent";
 import ExperienceContent from "./ExperienceContent";
