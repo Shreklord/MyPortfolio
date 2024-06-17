@@ -7,6 +7,7 @@ type HomeContentProps = {
 
 function HomeContent({ activeTab, setActiveTab }: HomeContentProps){
     const handleButtonClick = (tab: string) => {
+        activeTab
         setActiveTab(tab);
       };
 
