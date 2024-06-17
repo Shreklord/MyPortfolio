@@ -110,11 +110,12 @@ body, html {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 150px 200px 0px 200px;
-  gap: 20px; 
+  padding: 200px 200px 0px 200px;
+  gap: 80px; 
 }
 
 .home_column {
+  padding: 80px 0px 0px 0px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -153,8 +154,8 @@ body, html {
 
 .home_goldhammer_image{
   background-image: url('/src/assets/Images/Goldhammer.png'); 
-  width: 600px;
-  height: 650px;
+  width: 700px;
+  height: 750px;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -205,10 +206,10 @@ body, html {
 .experience_row {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 300px 200px 0px 200px;
-  gap: 30px; 
+  
+  
+  /* padding: 300px 200px 0px 200px; */
+  /* gap: 100px;  */
 }
 
 .experience_column1 {
@@ -216,96 +217,98 @@ body, html {
   display: flex;
   flex-direction: column;
   align-items: left;
+  padding: 0px 0px 0px 200px
 }
 .experience_column2 {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: left;
+  padding: 0px 100px 0px 200px
 }
 .experience_column3 {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: left;
+  padding:0px 100px 0px 0px;
+  
+}
+.experience_row_header{
+  padding: 300px 100px 50px 150px
 }
 
 .expereince_header1 {
-  padding-bottom: 40px;
+ 
   font-size: 60px;
   color: white;
 }
 
 .experience_title1 {
-  margin: 0px;
+  margin-top: 0px;
+  padding: 0px 200px 0px 0px;
   font-size: 30px;
-  padding-bottom: 0px;
+  
   color: #b1aeae;
 }
 
 .experience_title2{
-  margin: 0px;
-  padding-top: 240px;
+  margin-top: 0px;
+  padding: 0px 200px 0px 0px;
+  
   font-size: 30px;
-  padding-bottom: 0px;
+  
   color: #b1aeae;
 }
 
 .experience_title3{
-  padding-top: 30px;
-  margin: 0px;
+  margin-top: 0px;
+  padding: 0px 200px 0px 0px;
+  
   font-size: 30px;
-  padding-bottom: 0px;
+  
   color: #b1aeae;
 }
 
 .experience_spencers1 {
-  margin: 0px;
-  padding-top: 30px;
+  padding: 0px 0px 0px 0px;
   font-size: 20px;
   color: #DBD4D4;
 }
 .experience_spencers2 {
-  margin: 0px;
-  padding-top: 30px;
+ 
   font-size: 20px;
   color: #DBD4D4;
 }
 .experience_spencers3 {
-  margin: 0px;
-  padding-top: 30px;
+ 
   font-size: 20px;
   color: #DBD4D4;
 }
 
 .experience_sclpt1 {
-  margin: 0px;
-  padding-top: 30px;
+  
   font-size: 20px;
   color: #DBD4D4;
 }
 .experience_sclpt2 {
-  margin: 0px;
-  padding-top: 30px;
+ 
   font-size: 20px;
   color: #DBD4D4;
 }
 .experience_sclpt3 {
-  margin: 0px;
-  padding-top: 30px;
+ 
   font-size: 20px;
   color: #DBD4D4;
 }
 .experience_sclpt4 {
-  margin: 0px;
-  padding-top: 30px;
+ 
   font-size: 20px;
   color: #DBD4D4;
 }
 
 .experience_uofsc1 {
-  margin: 0px;
-  padding-top: 30px;
+
   font-size: 20px;
   color: #DBD4D4;
 }
