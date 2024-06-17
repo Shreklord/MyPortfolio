@@ -1,4 +1,4 @@
-// import React, { useState } from "react";
+//import React, { useState } from "react";
 
 type HomeContentProps = {
     activeTab: string;
@@ -7,7 +7,7 @@ type HomeContentProps = {
 
 function HomeContent({ activeTab, setActiveTab }: HomeContentProps){
     const handleButtonClick = (tab: string) => {
-        activeTab
+        activeTab;
         setActiveTab(tab);
       };
 
