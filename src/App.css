@@ -6,7 +6,7 @@ html {
 }
 
 body{
-  height: 100vh;
+  height: 100%;
 }
 
 .main-background{
@@ -86,21 +86,37 @@ body{
 }
 
 .home_text1 {
-  font-size: 24px;
-  color: #b1aeae;
+  font-size: 2rem;;
+  color: #dbd4d4;
+}
+.about_me_text1{
+  font-size: 2rem;;
+  color: #dbd4d4;
 }
 
 .home_text1_1 {
-  font-size: 24px;
-  color: #b1aeae;
+  font-size: 2rem;;
+  color: #dbd4d4;
 }
 
 .home_text2 {
-  font-size: 24px;
+  font-size: 2rem;;
   color: #dbd4d4;
 }
 
 .home_row {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: calc(100vh - 99.75px);
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin-left: 9rem;
+  margin-right: 4rem;
+}
+
+.about_me_row{
   display: flex;
   flex-direction: row;
   width: 100vw;
@@ -121,11 +137,26 @@ body{
 
 @media screen and (max-width: 1000px) {
   .home_row {
-    padding-top: 200px;
+    /* padding-top: 200px; */
+    justify-content: center;
+    align-content: center;
     flex-direction: column;
-    margin-left: .5rem;
+    margin-left: .05rem;
+    height: calc(100% - 80px);
+  }
+  .home_column{
+    /* padding-top: 200px; */
+    padding-top: 100px;
+    padding-bottom: 0px;
+  }
+  .home_column2{
+    /* justify-content: flex-start; */
+    /* height: 250px; */
+    width: 400px;
+    height:400px;
   }
   .home_header1{
+    /* padding-top: 200px; */
     font-size: 2.5rem;
   }
   .tabs_row{
@@ -146,10 +177,39 @@ body{
   }
   .goldhammer_image{
     width:100%;
-    height:65%;
+    height:100%;
   
   }
+  .experience_button{
+    font-size:1rem;
+  }
+  .html{
+    background-repeat: repeat-y;
+  }
+  .main-background{
+    height: calc(100vh - 129.91px);
+    width: 100vw;
+  }
+  
 
+  
+
+
+}
+
+@media screen and (min-width: 2900px) {
+  .home_header1{
+    font-size: 6rem;
+  }
+  .home_text1{
+    font-size:4rem;
+  }
+  .home_text2{
+    font-size:4rem;
+  }
+  .experience_button{
+    font-size:4rem;
+  }
 }
 
 .home_column {
@@ -167,11 +227,27 @@ body{
   align-items: center;
 }
 
+.about_me_column{
+  flex: 1;
+  padding-left: 60px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.about_me_column2{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .experience_button {
   display: inline-block;
   height: 100px;
   width: 50%;
-  font-size: 2rem;
+  min-width: 500px;
+  font-size: 250%;
   font-weight: 600;
   color: black;
   background-color: #67d45e;
