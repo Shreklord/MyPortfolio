@@ -14,10 +14,10 @@ type MainContentProps = {
 function MainContent({ activeTab, setActiveTab }: MainContentProps) {
   return (
     <div className="main-background">
-       {activeTab === "Home" && <HomeContent activeTab={activeTab} setActiveTab={setActiveTab} />}
-       {activeTab === "Contact" && <ContactContent />}
-       {activeTab === "Experience" && <ExperienceContent />}
-       {activeTab === "About Me" && <AboutMeContent />}
+      {activeTab === "Home" && <HomeContent setActiveTab={setActiveTab} />}
+      {activeTab === "Contact" && <ContactContent />}
+      {activeTab === "Experience" && <ExperienceContent />}
+      {activeTab === "About Me" && <AboutMeContent />}
     </div>
   );
 }
