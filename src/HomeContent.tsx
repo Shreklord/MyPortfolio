@@ -10,9 +10,9 @@ function HomeContent({ setActiveTab }: HomeContentProps) {
       <div className="home_column">
         <h1 className="home_header1">Hey, Im Anthony Goldhammer</h1>
         <h2 className="home_text1">
-          Web Developer and Software Engineer, Based out
+          Web Developer and Software Engineer, <br />
+          Based out of Fort Mill, South Carolina.
         </h2>
-        <h2 className="home_text1_1">of Fort Mill, South Carolina.</h2>
         <h2 className="home_text2">Lets get Started.</h2>
         <button
           className="experience_button"
@@ -25,7 +25,11 @@ function HomeContent({ setActiveTab }: HomeContentProps) {
         </button>
       </div>
       <div className="home_column2">
-        <div className="home_goldhammer_image"></div>
+        <img
+          src="/src/assets/Images/Goldhammer.png"
+          alt="Goldhammer"
+          width={400}
+        />
       </div>
     </div>
   );
