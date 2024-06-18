@@ -1,5 +1,21 @@
 html {
   background-image: url('/src/assets/Images/Wave.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+body{
+  height: 100vh;
+}
+
+.main-background{
+  height: calc(100vh - 99.75px);
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
 }
 
 .nav_row {
@@ -64,7 +80,7 @@ html {
 
 .home_header1 {
   margin: 0px;
-  font-size: 32px;
+  font-size: 4rem;
   /* padding-bottom: 15px; */
   color: white;
 }
@@ -87,8 +103,10 @@ html {
 .home_row {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  height: 100%;
+  width: 100vw;
+  height: calc(100vh - 99.75px);
+  justify-content: space-evenly;
+  gap: 20px;
   align-items: center;
   margin-left: 4rem;
   margin-right: 4rem;
@@ -103,6 +121,7 @@ html {
 
 .home_column {
   flex: 1;
+  
   display: flex;
   flex-direction: column;
 }
@@ -116,7 +135,7 @@ html {
 
 .experience_button {
   display: inline-block;
-  height: 48px;
+  height: 100px;
   width: 50%;
   font-size: 24px;
   font-weight: 600;
