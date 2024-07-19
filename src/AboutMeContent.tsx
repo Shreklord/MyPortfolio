@@ -17,7 +17,7 @@ function AboutMeContent() {
         </h2>
       </div>
       <div className="about_me_column2">
-        <div className="about_me_image"></div>
+        <img className="about_me_image"></img>
       </div>
     </div>
   );

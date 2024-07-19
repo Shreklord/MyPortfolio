@@ -141,23 +141,28 @@ body{
   height:85%;
 
 }
-
+/* Home Content */
 @media screen and (min-width: 1710px) {
   .goldhammer_image{
     width:65%;
     height:65%;
   
   }
+ 
 }
-
+/* Home Content */
  @media screen and (max-width:710px) {
   .home_column2{
     width:400px;
     height: 400px;
   }
+  .home_header1{
+    padding-top: 40%;
+    font-size: 3rem;
+  }
 } 
 
-
+/* Home Content */
 @media screen and (max-width: 1280px) {
   .home_row {
     /* padding-top: 200px; */
@@ -178,6 +183,7 @@ body{
     width: 450px;
     height:500px;
   }
+  /* Home Content */
   @media screen and (max-width: 715px) {
     .home_column2{
       /* justify-content: flex-start; */
@@ -188,7 +194,7 @@ body{
   }
   
   .home_header1{
-    /* padding-top: 200px; */
+    padding-top: 20%;
     font-size: 3rem;
   }
   .home_text1{
@@ -223,6 +229,7 @@ body{
   }
   .html{
     background-repeat: repeat-y;
+    min-height: 100vh;
   }
   .main-background{
     height: calc(100vh - 129.91px);
@@ -230,6 +237,8 @@ body{
   }
 }
 
+
+/* Home Content */
 @media screen and (min-width: 2900px) {
   .home_header1{
     font-size: 6rem;
@@ -247,6 +256,144 @@ body{
     max-width: 1500px;
   }
 }
+
+/* About Me */
+@media screen and (max-width: 900px) {
+  .about_me_row{
+     /* padding-top: 200px; */
+     justify-content: center;
+     align-content: center;
+     flex-direction: column;
+     margin-left: .05rem;
+     margin-right: .45rem;
+     height: calc(100% - 80px);
+  }
+  .about_me_text1{
+    font-size: 20px !important;
+    padding-right: 20px !important;
+  }
+  .aboutme_header1{
+    font-size: 50px !important;
+    padding-top: 100px;
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
+  }
+  .about_me_column{
+    max-width: 100%;
+    padding-top: 30px;
+  }
+
+  .about_me_image{
+   max-width: 400px;
+   max-height: 450px;
+  }
+  .main-background{
+    max-width: 100%;
+  }
+  
+}
+
+@media (min-width: 901px) and (max-width: 1399px) {
+  .about_me_text1{
+    font-size: 20px !important;
+  }
+  .about_me_row{
+    margin-left: 20px;
+  }
+  .aboutme_header1{
+    font-size: 30px;
+    padding-top: 100px;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .about_me_image{
+   max-width: 400px;
+   max-height: 450px;
+  }
+}
+
+
+@media (min-width: 1400px) and (max-width: 1500px) {
+  .about_me_text1{
+    font-size: 25px;
+  }
+  .aboutme_header1{
+    font-size: 30px;
+    padding-top: 100px;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .about_me_image{
+   max-width: 500px;
+   max-height: 650px;
+  }
+}
+
+@media (max-width: 900px) {
+  .experience_row {
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-content: center !important;
+      margin-left: .05rem;
+      height: calc(100% - 80px);
+  }
+  .expereince_header1{
+    padding-top: 50px;
+    justify-content: center !important;
+    align-content: center !important;
+    padding-left: 20px;
+  }
+  .expereince_header1{
+    font-size: 50px !important;
+  }
+  .experience_row_header{
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 0px !important;
+    padding-left: 70px !important;
+  }
+  .experience_column1,.experience_column2,.experience_column3{
+    padding: 10px 0px 10px 140px !important;
+  }
+  .experience_title1,.experience_title2,.experience_title3{
+    font-size: 20px !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1399px) {
+  .experience_row_header{
+    padding-left: 50px !important;
+  }
+  .experience_column1{
+    padding-left: 80px !important;
+  }
+  .experience_column2,.experience_column3{
+    padding: 0% 0% 0% 0% !important;
+    margin: 0% 0% 0% 0% !important;
+  }
+
+  .experience_title1{
+    padding-right: 40px !important;
+  }
+
+  .experience_title2{
+    padding-right: 40px !important;
+  }
+
+  .experience_title3{
+    padding-right: 40px !important;
+  }
+
+}
+
+@media (max-width: 900px) {
+  
+}
+
+
 
 .home_column {
   flex: 1;
@@ -319,7 +466,7 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 225px 200px 0px 250px;
+  padding: 150px 200px 0px 0px;
 }
 
 .image_row {
@@ -330,7 +477,7 @@ body{
 
 .contact_header {
   margin: 0px;
-  font-size: 60px;
+  font-size: 80px;
   padding-bottom: 15px;
   color: white;
 }
@@ -360,7 +507,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: left;
-  padding: 0px 100px 0px 200px;
+  padding: 0px 100px 0px 5%;
 }
 .experience_column3 {
   flex: 1;
@@ -370,7 +517,7 @@ body{
   padding: 0px 100px 0px 0px;
 }
 .experience_row_header {
-  padding: 300px 100px 50px 150px;
+  padding: 0px 100px 50px 150px;
 }
 
 .expereince_header1 {
