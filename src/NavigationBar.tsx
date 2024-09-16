@@ -21,7 +21,7 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
       window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
     } else if (tab === "Resume") {
       // Open the PDF file in a new tab
-      window.open("public/Resume/Resume_Website.pdf", "_blank", "noopener,noreferrer");
+      window.open("/Resume/Resume_Website.pdf", "_blank", "noopener,noreferrer");
     } else {
       setActiveTab(tab);
     }
