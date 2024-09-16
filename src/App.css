@@ -1,20 +1,24 @@
 html {
-  /* background-image: url('/src/assets/Images/Wave.png'); */
-  /* background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%; */
-  display: block;
-  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Ensures no horizontal overflow */
+ 
   background: url('/src/assets/Images/Wave.png') 50% 0 repeat-y;
-  /* transform: scaleY(-1); */
+  
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover; 
 }
 
 body{
-  height: 100%;
+   margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Ensures no horizontal overflow */
 }
 
 .main-background{
@@ -60,9 +64,11 @@ body{
 .tabs_row {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   gap: 55px;
-  margin-right: 200px;
+  margin-right: 5vw;
   margin-top: 20px;
+  width: 100%
 }
 
 .nav_tab {
@@ -76,6 +82,7 @@ body{
   font-size: 16px;
   cursor: pointer;
 }
+
 
 .content {
   position: absolute;
@@ -141,257 +148,7 @@ body{
   height:85%;
 
 }
-/* Home Content */
-@media screen and (min-width: 1710px) {
-  .goldhammer_image{
-    width:65%;
-    height:65%;
-  
-  }
- 
-}
-/* Home Content */
- @media screen and (max-width:710px) {
-  .home_column2{
-    width:400px;
-    height: 400px;
-  }
-  .home_header1{
-    padding-top: 40%;
-    font-size: 3rem;
-  }
-} 
 
-/* Home Content */
-@media screen and (max-width: 1280px) {
-  .home_row {
-    /* padding-top: 200px; */
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    margin-left: .05rem;
-    height: calc(100% - 80px);
-  }
-  .home_column{
-    /* padding-top: 200px; */
-    padding-top: 100px;
-    padding-bottom: 0px;
-  }
-  .home_column2{
-    /* justify-content: flex-start; */
-    /* height: 250px; */
-    width: 450px;
-    height:500px;
-  }
-  /* Home Content */
-  @media screen and (max-width: 715px) {
-    .home_column2{
-      /* justify-content: flex-start; */
-      /* height: 250px; */
-      width: 250px;
-      height:300px;
-    }
-  }
-  
-  .home_header1{
-    padding-top: 20%;
-    font-size: 3rem;
-  }
-  .home_text1{
-    font-size:2rem;
-  }
-  .home_text2{
-    font-size:2rem;
-  }
-  .tabs_row{
-    gap:15px;
-  }
-  .nav_tab {
-    color: white;
-    font-size: 12px;
-    cursor: pointer;
-  }
-  .nav_tab_active {
-    color: #67d45e;
-    font-size: 12px;
-    cursor: pointer;
-  }
-  .name_column{
-    padding-right: 32px;
-  }
-  .goldhammer_image{
-    width:100%;
-    height:100%;
-  
-  }
-  .experience_button{
-    font-size:1rem;
-  }
-  .html{
-    background-repeat: repeat-y;
-    min-height: 100vh;
-  }
-  .main-background{
-    height: calc(100vh - 129.91px);
-    width: 100vw;
-  }
-}
-
-
-/* Home Content */
-@media screen and (min-width: 2900px) {
-  .home_header1{
-    font-size: 6rem;
-  }
-  .home_text1{
-    font-size:4rem;
-  }
-  .home_text2{
-    font-size:4rem;
-  }
-  .experience_button{
-    font-size:4rem;
-  }
-  .home_column2{
-    max-width: 1500px;
-  }
-}
-
-/* About Me */
-@media screen and (max-width: 900px) {
-  .about_me_row{
-     /* padding-top: 200px; */
-     justify-content: center;
-     align-content: center;
-     flex-direction: column;
-     margin-left: .05rem;
-     margin-right: .45rem;
-     height: calc(100% - 80px);
-  }
-  .about_me_text1{
-    font-size: 20px !important;
-    padding-right: 20px !important;
-  }
-  .aboutme_header1{
-    font-size: 50px !important;
-    padding-top: 100px;
-    padding: 20px;
-    justify-content: center;
-    align-content: center;
-  }
-  .about_me_column{
-    max-width: 100%;
-    padding-top: 30px;
-  }
-
-  .about_me_image{
-   max-width: 400px;
-   max-height: 450px;
-  }
-  .main-background{
-    max-width: 100%;
-  }
-  
-}
-
-@media (min-width: 901px) and (max-width: 1399px) {
-  .about_me_text1{
-    font-size: 20px !important;
-  }
-  .about_me_row{
-    margin-left: 20px;
-  }
-  .aboutme_header1{
-    font-size: 30px;
-    padding-top: 100px;
-    justify-content: center;
-    align-content: center;
-  }
-
-  .about_me_image{
-   max-width: 400px;
-   max-height: 450px;
-  }
-}
-
-
-@media (min-width: 1400px) and (max-width: 1500px) {
-  .about_me_text1{
-    font-size: 25px;
-  }
-  .aboutme_header1{
-    font-size: 30px;
-    padding-top: 100px;
-    justify-content: center;
-    align-content: center;
-  }
-
-  .about_me_image{
-   max-width: 500px;
-   max-height: 650px;
-  }
-}
-
-@media (max-width: 900px) {
-  .experience_row {
-      flex-direction: column !important;
-      justify-content: center !important;
-      align-content: center !important;
-      margin-left: .05rem;
-      height: calc(100% - 80px);
-  }
-  .expereince_header1{
-    padding-top: 50px;
-    justify-content: center !important;
-    align-content: center !important;
-    padding-left: 20px;
-  }
-  .expereince_header1{
-    font-size: 50px !important;
-  }
-  .experience_row_header{
-    justify-content: center;
-    align-content: center;
-    padding-bottom: 0px !important;
-    padding-left: 70px !important;
-  }
-  .experience_column1,.experience_column2,.experience_column3{
-    padding: 10px 0px 10px 140px !important;
-  }
-  .experience_title1,.experience_title2,.experience_title3{
-    font-size: 20px !important;
-  }
-}
-
-@media (min-width: 901px) and (max-width: 1399px) {
-  .experience_row_header{
-    padding-left: 50px !important;
-  }
-  .experience_column1{
-    padding-left: 80px !important;
-  }
-  .experience_column2,.experience_column3{
-    padding: 0% 0% 0% 0% !important;
-    margin: 0% 0% 0% 0% !important;
-  }
-
-  .experience_title1{
-    padding-right: 40px !important;
-  }
-
-  .experience_title2{
-    padding-right: 40px !important;
-  }
-
-  .experience_title3{
-    padding-right: 40px !important;
-  }
-
-}
-
-@media (max-width: 900px) {
-  
-}
 
 
 
@@ -429,7 +186,6 @@ body{
   display: inline-block;
   height: 100px;
   width: 50%;
-  min-width: 500px;
   font-size: 250%;
   font-weight: 600;
   color: black;
@@ -582,4 +338,455 @@ body{
 .experience_uofsc1 {
   font-size: 20px;
   color: #dbd4d4;
+}
+
+/* Standard breakpoints <600px, 601, 768, 992, 1200> */
+@media (max-width: 600px) and (orientation: portrait) {
+  /* Navigation Bar */
+  .nav_row {
+    gap: 3vw;
+  }
+  .name_header {
+    font-size: 3vw;
+  }
+  .nav_tab {
+    font-size: 2vw;
+  }
+  .nav_tab_active {
+    font-size: 2vw;
+  }
+  .name_column {
+    width: 25%
+  }
+  .tabs_row {
+    gap: 5vw;
+    width: 75%
+  }
+
+  /* Home Content */
+  .home_header1{
+    font-size: 6vw;
+    overflow-wrap: break-word; 
+    margin-top: 10vh;
+    margin-left: 5vw;
+  }
+  .home_row {
+    margin-left: 12vw;
+    flex-direction: column;
+    overflow: hidden;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    overflow-y: auto;
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words are broken and wrap to the next line */
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    /* padding-top: 15vh; */
+  }
+  .home_text1 {
+    font-size: 5vw;
+    margin-left: 5vw;
+  }
+  .home_text2 {
+    font-size: 5vw;
+    margin-left: 5vw;
+  }
+  .home_column {
+    width: 100%;
+    padding-left: 0%;
+  }
+  .experience_button {
+    height: 8vh;
+    width: 50vw;
+    font-size: 4vw;
+    margin-left: 25vw;
+  }
+  .home_column2 {
+    width: 45vh;
+    height: 45vh;
+  }
+  .goldhammer_image{
+    
+  }
+
+  /* About Me */
+  .about_me_row{
+    margin-left: 12vw;
+    flex-direction: column;
+    overflow: hidden;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    overflow-y: auto;
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words are broken and wrap to the next line */
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    /* padding-top: 15vh; */
+  }
+  .about_me_column{
+    padding-left: 4vw;
+  }
+  .aboutme_header1{
+    margin-top: 10vh;
+    font-size: 5vw;
+    
+  }
+  .about_me_text1{
+    font-size: 3vw;
+  }
+  .about_me_image{
+    width: 50vw;
+    height: 60vw;
+    border-width: 3vw;
+  }
+  /* Experience */
+  .experience_border{
+    margin-left: 12vw;
+    /* flex-direction: column; */
+    overflow: hidden;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    overflow-y: auto;
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words are broken and wrap to the next line */
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+  } 
+  .experience_row{
+    flex-direction: column;
+  }
+  .experience_row_header{
+    margin: 0;
+    padding: 0;
+    
+  }
+  .expereince_header1{
+    font-size: 6vw;
+  }
+  .experience_title1,.experience_title2,.experience_title3{
+    font-size: 3vw;
+    margin: 0;
+    padding: 0;
+    margin-top: 8vw;
+  }
+  .experience_column1,.experience_column2,.experience_column3{
+    padding: 0;
+    margin: 0;
+  }
+  .experience_spencers1{
+    font-size: 3vw;
+    margin: 0;
+    padding: 0;
+    margin-left: 4vw;
+  }
+
+  .experience_sclpt1,.experience_sclpt2,.experience_sclpt3,.experience_sclpt4{
+    font-size: 3vw;
+    margin: 0;
+    padding: 0;
+    margin-left: 4vw;
+  }
+  .experience_uofsc1{
+    font-size: 3vw;
+    margin: 0;
+    padding: 0;
+    margin-left: 4vw;
+  }
+
+  /* Contact */
+  .SiGmail {
+    font-size: 2vw;
+  }
+  .CiCloudOn {
+    font-size: 2vw;
+  }
+  
+}
+
+@media (min-width: 601px) {
+  /* Navigation Bar */
+  .tabs_row {
+    gap: 5vw;
+    text-align: right;
+  }
+
+  /* Home Content */
+  .home_row {
+    overflow-y: auto; /* Enable vertical scrolling when the content overflows */
+    overflow-x: hidden;
+    flex-direction: column;
+    margin-left: 1vw;
+  }
+  
+  .experience_button{
+    width: 50vw;
+    
+    
+  }
+  .home_header1{
+    font-size: 6vw;
+    overflow-wrap: break-word; 
+    margin-top: 10vh;
+  
+  }
+  /* About Me */
+  .about_me_row{
+    margin-left: 12vw;
+    flex-direction: column;
+    overflow: hidden;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    overflow-y: auto;
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words are broken and wrap to the next line */
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    /* padding-top: 15vh; */
+  }
+  .about_me_column{
+    padding-left: 4vw;
+  }
+  .aboutme_header1{
+    margin-top: 10vh;
+    font-size: 5vw;
+    
+  }
+  .about_me_text1{
+    font-size: 3vw;
+  }
+  .about_me_image{
+    width: 50vw;
+    height: 60vw;
+    border-width: 3vw;
+  }
+  /* Experience */
+  .experience_border{
+    margin-left: 12vw;
+    /* flex-direction: column; */
+    overflow: hidden;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    overflow-y: auto;
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words are broken and wrap to the next line */
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+  } 
+  .experience_row{
+    flex-direction: column;
+  }
+  .experience_row_header{
+    margin: 0;
+    padding: 0;
+    
+  }
+  .expereince_header1{
+    font-size: 6vw;
+  }
+  .experience_title1,.experience_title2,.experience_title3{
+    font-size: 3vw;
+    margin: 0;
+    padding: 0;
+    margin-top: 8vw;
+  }
+  .experience_column1,.experience_column2,.experience_column3{
+    padding: 0;
+    margin: 0;
+  }
+  .experience_spencers1{
+    font-size: 3vw;
+    margin: 0;
+    padding: 0;
+    margin-left: 4vw;
+  }
+
+  .experience_sclpt1,.experience_sclpt2,.experience_sclpt3,.experience_sclpt4{
+    font-size: 3vw;
+    margin: 0;
+    padding: 0;
+    margin-left: 4vw;
+  }
+  .experience_uofsc1{
+    font-size: 3vw;
+    margin: 0;
+    padding: 0;
+    margin-left: 4vw;
+  }
+}
+
+@media (min-width: 1000px){
+  /* Home Content */
+  .home_row{
+    flex-direction: row;
+  }
+  .home_header1{
+    font-size: 3vw;
+  }
+  .home_text1 {
+    font-size: 2.8vw;
+    
+  }
+  .home_text2 {
+    font-size: 2.8vw;
+    
+  }
+  .experience_button{
+    width: 30vw;
+  }
+  /* About Me */
+  .about_me_row{
+    margin-left: 12vw;
+    flex-direction: row;
+    overflow: hidden;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    overflow-y: auto;
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words are broken and wrap to the next line */
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    /* padding-top: 15vh; */
+  }
+  .about_me_column{
+    padding-left: 4vw;
+  }
+  .aboutme_header1{
+    margin-top: 10vh;
+    font-size: 3vw;
+    margin-bottom: 0;
+    
+  }
+  .about_me_text1{
+    font-size: 2vw;
+  }
+  .about_me_image{
+    width: 25vw;
+    height: 30vw;
+    border-width: 3vw;
+  }
+  /* Experience */
+  .experience_border{
+    margin-left: 5vw;
+  }
+  .experience_row{
+    margin-left: 12vw;
+    flex-direction: row;
+    overflow: hidden;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    overflow-y: auto;
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words are broken and wrap to the next line */
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+  }
+  .experience_row_header{
+    margin: 0;
+    padding: 0;
+    
+  }
+  .expereince_header1{
+    font-size: 4vw;
+  }
+  .experience_title1,.experience_title2,.experience_title3{
+    font-size: 2vw;
+    margin: 0;
+    padding: 0;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+  .experience_column1,.experience_column2,.experience_column3{
+    padding: 0;
+    margin: 0;
+  }
+  .experience_spencers1{
+    font-size: 2vw;
+    margin: 0;
+    padding: 0;
+    margin-left: 1vw;
+  }
+
+  .experience_sclpt1,.experience_sclpt2,.experience_sclpt3,.experience_sclpt4{
+    font-size: 2vw;
+    margin: 0;
+    padding: 0;
+    margin-left: 1vw;
+  }
+  .experience_uofsc1{
+    font-size: 2vw;
+    margin: 0;
+    padding: 0;
+    margin-left: 1vw;
+  }
+}
+
+@media (min-width: 1300px){
+  /* Home Content */
+  .home_row{
+    flex-direction: row;
+  }
+  .home_header1{
+    font-size: 2.8vw;
+  }
+  .home_text1 {
+    font-size: 2.5vw;
+    
+  }
+  .home_text2 {
+    font-size: 2.5vw;
+    
+  }
+  .experience_button{
+    width: 30vw;
+  }
+  .goldhammer_image{
+    width: 30vw;
+    height: 35vw;
+  }
+  /* About Me */
+  .about_me_column{
+    padding-left: 4vw;
+  }
+  .aboutme_header1{
+    margin-top: 10vh;
+    font-size: 3vw;
+    margin-bottom: 0;
+    
+  }
+  .about_me_text1{
+    font-size: 1.5vw;
+  }
+  .about_me_image{
+    width: 25vw;
+    height: 30vw;
+    border-width: 3vw;
+  }
+}
+
+@media (max-width: 932px) and (orientation: landscape) {
+  .home_row {
+    padding-top: 200vh;
+    padding-bottom: 20vh;
+  }
+  .about_me_row {
+    padding-top: 200vh;
+    padding-bottom: 20vh;
+  }
+  .experience_border{
+    padding-top: 190vh;
+    padding-bottom: 20vh;
+  }
+  
+  .main-background {
+    margin-left: 12vw;
+    flex-direction: row;
+    overflow: hidden;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    overflow-y: auto;
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words are broken and wrap to the next line */
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+  }
 }

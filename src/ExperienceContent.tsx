@@ -14,7 +14,7 @@ function ExperienceContent(){
    
 
     return (
-    <div>
+    <div className="experience_border">
     <div className="experience_row_header">
         <div>
             <h1 className="expereince_header1">Experience</h1>
