@@ -26,7 +26,7 @@ function HomeContent({ setActiveTab }: HomeContentProps) {
       </div>
       <div className="home_column2">
         <img className="goldhammer_image"
-          src="public\Images\Goldhammer.png"
+          src="/Images/Goldhammer.png"
           alt="Goldhammer"
         />
       </div>
