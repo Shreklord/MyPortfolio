@@ -18,6 +18,7 @@ function MainContent({ activeTab, setActiveTab }: MainContentProps) {
       {activeTab === "Contact" && <ContactContent />}
       {activeTab === "Experience" && <ExperienceContent />}
       {activeTab === "About Me" && <AboutMeContent />}
+      {activeTab === "GitHub"}
     </div>
   );
 }

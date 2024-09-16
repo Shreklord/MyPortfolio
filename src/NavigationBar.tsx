@@ -16,7 +16,15 @@ const tabs: string[] = [
 
 function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
   const handleTabClick = (tab: string) => {
-    setActiveTab(tab);
+    if (tab === "GitHub") {
+      // Open GitHub profile in a new tab
+      window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
+    } else if (tab === "Resume") {
+      // Open the PDF file in a new tab
+      window.open("public/Resume/Resume_Website.pdf", "_blank", "noopener,noreferrer");
+    } else {
+      setActiveTab(tab);
+    }
   };
 
   return (
