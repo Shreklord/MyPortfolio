@@ -29,7 +29,7 @@ function ExperienceContent(){
         </div>
         <div className="experience_column2">
             
-            <h2 className="experience_title2">SCLPT</h2>
+            <h2 className="experience_title2">SCLPT (Summer 2024, Intern)</h2>
             <h3 className="experience_sclpt1"><BsStack color="#67d45e"/>   Full Stack Development</h3>
             <h3 className="experience_sclpt2"><FaReact color="#67d45e"/>   React</h3>
             <h3 className="experience_sclpt3"><SiTypescript color="#67d45e"/>   TypeScript</h3>

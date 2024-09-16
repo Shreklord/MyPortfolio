@@ -405,9 +405,7 @@ body{
     width: 45vh;
     height: 45vh;
   }
-  .goldhammer_image{
-    
-  }
+ 
 
   /* About Me */
   .about_me_row{
@@ -494,11 +492,24 @@ body{
   }
 
   /* Contact */
-  .SiGmail {
-    font-size: 2vw;
+  .contact_header{
+    margin-right: 40vw;
+    margin-bottom: 5vh;
+    font-size: 8vw;
+    padding: 0;
   }
-  .CiCloudOn {
-    font-size: 2vw;
+  .contact_row{
+    padding: 0;
+  }
+  .icon {
+    font-size: 20vw;
+    justify-content: center;
+    align-items: center;
+  }
+  .icons {
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
   }
   
 }
@@ -612,6 +623,27 @@ body{
     padding: 0;
     margin-left: 4vw;
   }
+
+  /* Contact */
+  .contact_header{
+    margin-right: 40vw;
+    margin-bottom: 5vh;
+    font-size: 8vw;
+    padding: 0;
+  }
+  .contact_row{
+    padding: 0;
+  }
+  .icon {
+    font-size: 20vw;
+    justify-content: center;
+    align-items: center;
+  }
+  .icons {
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (min-width: 1000px){
@@ -718,6 +750,26 @@ body{
     padding: 0;
     margin-left: 1vw;
   }
+  /* Contact */
+  .contact_header{
+    margin-right: 40vw;
+    margin-bottom: 5vh;
+    font-size: 8vw;
+    padding: 0;
+  }
+  .contact_row{
+    padding: 0;
+  }
+  .icon {
+    font-size: 20vw;
+    justify-content: center;
+    align-items: center;
+  }
+  .icons {
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (min-width: 1300px){
@@ -776,6 +828,11 @@ body{
     padding-top: 190vh;
     padding-bottom: 20vh;
   }
+  .contact_column{
+    padding-top: 190vh;
+    padding-bottom: 20vh;
+  }
+  
   
   .main-background {
     margin-left: 12vw;

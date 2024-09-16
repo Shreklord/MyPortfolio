@@ -8,11 +8,11 @@ function ContactContent() {
       <div className="contact_row">
         <h1 className="contact_header">Contact</h1>
       </div>
-      <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", gap:"30px",paddingBottom:"75px" , paddingTop:"50px", paddingLeft:"100px", position:"relative" }}>
-        <SiGmail size={390} color="white" />
-        <CiCloudOn size={470} color="white" />
-        <CiInstagram size={400} color="white" />
-        <CiLinkedin size={400} color="white" />
+      <div className= "icons" style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+        <SiGmail color="white" className="icon" />
+        <CiCloudOn color="white" className="icon" />
+        <CiInstagram color="white" className="icon" />
+        <CiLinkedin  color="white" className="icon" />
       </div>
     </div>
   );
