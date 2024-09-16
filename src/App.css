@@ -205,7 +205,7 @@ body{
 
 
 .about_me_image {
-  background-image: url("src/assets/Images/HeadShotAnthony.jpg");
+  background-image: url("/Images/HeadShotAnthony.jpg");
   width: 600px;
   height: 750px;
   background-size: cover;
