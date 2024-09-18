@@ -14,11 +14,11 @@ html {
 }
 
 body{
-   margin: 0;
+    margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow-x: hidden; /* Ensures no horizontal overflow */
+    overflow-x: visible; /* Ensures no horizontal overflow */
 }
 
 .main-background{
@@ -27,6 +27,7 @@ body{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  overflow: visible;
   
 }
 
@@ -216,6 +217,7 @@ body{
 .contact_header {
   padding-top: 100px;
   font-size: 100px;
+  overflow: visible;
 }
 
 .contact_row {
@@ -223,6 +225,7 @@ body{
   flex-direction: row;
   justify-content: space-between;
   padding: 150px 200px 0px 0px;
+  overflow-x: visible;
 }
 
 .image_row {
@@ -236,6 +239,7 @@ body{
   font-size: 80px;
   padding-bottom: 15px;
   color: white;
+  overflow-x: visible;
 }
 
 .aboutme_header1 {
@@ -760,6 +764,19 @@ body{
   .contact_row{
     padding: 0;
   }
+  .contact_column{
+    margin-left: 12vw;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: visible;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    overflow-y: auto;
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words are broken and wrap to the next line */
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+  }
   .icon {
     font-size: 20vw;
     justify-content: center;
@@ -770,6 +787,18 @@ body{
     justify-content: center;
     align-items: center;
   }
+  .main-background{
+    margin-left: 12vw;
+    flex-direction: row;
+    overflow: hidden;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    overflow-y: auto;
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words are broken and wrap to the next line */
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+  }
 }
 
 @media (min-width: 1300px){
@@ -778,40 +807,77 @@ body{
     flex-direction: row;
   }
   .home_header1{
-    font-size: 2.8vw;
+    font-size: 2vw;
   }
   .home_text1 {
-    font-size: 2.5vw;
+    font-size: 1.3vw;
     
   }
   .home_text2 {
-    font-size: 2.5vw;
+    font-size: 1.3vw;
+    margin-top: 0;
     
   }
   .experience_button{
-    width: 30vw;
+    width: 25vw;
+    /* margin-left: 10vw; */
+    margin-top: 5vh;
   }
   .goldhammer_image{
     width: 30vw;
     height: 35vw;
   }
+  .home_column{
+    padding-bottom: 12vh;
+    margin-left: 8vw;
+  }
+  
   /* About Me */
   .about_me_column{
     padding-left: 4vw;
+    padding-bottom: 7vh;
   }
   .aboutme_header1{
     margin-top: 10vh;
-    font-size: 3vw;
+    font-size: 2vw;
     margin-bottom: 0;
     
   }
   .about_me_text1{
-    font-size: 1.5vw;
+    font-size: 1.3vw;
   }
   .about_me_image{
     width: 25vw;
     height: 30vw;
     border-width: 3vw;
+  }
+  /* Contact */
+  .contact_header{
+    font-size: 3vw;
+    /* position: relative;
+    right: 5vw;  */
+    overflow: visible;
+  }
+  .contact_row{
+    overflow: visible;
+    /* position: relative;
+    right: 5vw; */
+    
+  }
+  .contact_column{
+    overflow-x: visible;
+    
+  }
+  .icon {
+    font-size: 10vw;
+  }
+  .icons {
+    gap: 4vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+  .main-background{
+    overflow: visible;
   }
 }
 
@@ -829,8 +895,11 @@ body{
     padding-bottom: 20vh;
   }
   .contact_column{
-    padding-top: 190vh;
+    padding-top: 120vh;
     padding-bottom: 20vh;
+  }
+  .icons{
+    flex-direction: row !important;
   }
   
   
