@@ -347,6 +347,20 @@ body{
 /* Standard breakpoints <600px, 601, 768, 992, 1200> */
 @media (max-width: 600px) and (orientation: portrait) {
   /* Navigation Bar */
+  .tabs_row {
+    display: none !important; /* Hide the tabs row */
+  }
+
+  .dropdown-menu {
+    display: block !important; /* Ensure the dropdown menu is displayed */
+    background-color: #403d3d;
+    color:#67d45e;
+    width: 30vw;
+    height: 8vh;
+    margin-right: 5vw;
+    font-size: 1rem;
+    padding: 10px;
+  }
   .nav_row {
     gap: 3vw;
   }
@@ -524,6 +538,13 @@ body{
     gap: 5vw;
     text-align: right;
   }
+  .dropdown-menu {
+    display: none; /* Hide the dropdown */
+  }
+
+  .tabs_row {
+    display: flex; /* Show the tabs */
+  }
 
   /* Home Content */
   .home_row {
@@ -539,10 +560,15 @@ body{
     
   }
   .home_header1{
-    font-size: 6vw;
+    font-size: 4vw;
     overflow-wrap: break-word; 
     margin-top: 10vh;
-  
+  }
+  .home_text1{
+    font-size: 4vw;
+  }
+  .home_text2{
+    font-size: 4vw;
   }
   /* About Me */
   .about_me_row{
@@ -793,7 +819,7 @@ body{
     overflow: hidden;
     margin-left: 0vw;
     margin-right: 0vw;
-    overflow-y: auto;
+    overflow-y: visible;
     white-space: normal; /* Allow text to wrap */
     word-wrap: break-word; /* Ensure long words are broken and wrap to the next line */
     overflow-wrap: break-word;

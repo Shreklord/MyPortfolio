@@ -27,6 +27,11 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
     }
   };
 
+  const handleDropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedTab = event.target.value;
+    handleTabClick(selectedTab); // Reuse the same tab click handler
+  };
+
   return (
     <nav>
       <div className="nav_row">
@@ -34,6 +39,8 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
           <h2 className="name_header">Anthony Goldhammer</h2>
           <div className="green_bar" />
         </div>
+        
+        {/* Tabs row for larger screens */}
         <div className="tabs_row">
           {tabs.map((tab) => (
             <div
@@ -45,6 +52,16 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
             </div>
           ))}
         </div>
+
+        {/* Dropdown for smaller screens */}
+        <select className="dropdown-menu" onChange={handleDropdownChange} value={activeTab}>
+          <option value="" disabled>Select a page</option>
+          {tabs.map((tab) => (
+            <option key={tab} value={tab}>
+              {tab}
+            </option>
+          ))}
+        </select>
       </div>
     </nav>
   );
