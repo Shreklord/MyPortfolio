@@ -802,30 +802,36 @@ body{
 }
 
 @media (min-width: 1300px){
+  /* Nav Bar */
+  .tabs_row{
+    margin-top: 3vh;
+  }
+
   /* Home Content */
   .home_row{
     flex-direction: row;
   }
   .home_header1{
-    font-size: 2vw;
+    font-size: 2.3vw;
   }
   .home_text1 {
-    font-size: 1.3vw;
+    font-size: 1.5vw;
     
   }
   .home_text2 {
-    font-size: 1.3vw;
+    font-size: 1.5vw;
     margin-top: 0;
     
   }
   .experience_button{
-    width: 25vw;
+    width: 20vw;
     /* margin-left: 10vw; */
     margin-top: 5vh;
+    font-size: 1.5vw;
   }
   .goldhammer_image{
-    width: 30vw;
-    height: 35vw;
+    width: 25vw;
+    height: 30vw;
   }
   .home_column{
     padding-bottom: 12vh;
@@ -872,12 +878,36 @@ body{
     font-size: 10vw;
   }
   .icons {
-    gap: 4vw;
+    gap: 5vw;
     margin-left: 1vw;
     margin-right: 1vw;
   }
-  .main-background{
-    overflow: visible;
+  /* Experience */
+  .experience_border{
+   
+  }
+  .experience_row{
+   
+  }
+  .experience_row_header{
+   
+  }
+  .expereince_header1{
+    font-size: 2vw;
+  }
+  .experience_title1,.experience_title2,.experience_title3{
+   font-size: 1.5vw;
+  }
+
+  .experience_spencers1{
+    font-size: 1.5vw;
+  }
+
+  .experience_sclpt1,.experience_sclpt2,.experience_sclpt3,.experience_sclpt4{
+    font-size: 1.5vw;
+  }
+  .experience_uofsc1{
+    font-size: 1.5vw;
   }
 }
 
