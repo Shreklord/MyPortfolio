@@ -1,4 +1,4 @@
-//import React, { useState } from "react";
+import React, { useState } from "react";
 
 type NavigationBarProps = {
   activeTab: string;
@@ -15,19 +15,15 @@ const tabs: string[] = [
 ];
 
 function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
-  const handleTabClick = (tab: string) => {
-    if (tab === "GitHub") {
-      window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
-    } else if (tab === "Resume") {
-      window.open("/Resume/Resume_Website.pdf", "_blank", "noopener,noreferrer");
-    } else {
-      setActiveTab(tab);
-    }
-  };
+  const [selectedTab, setSelectedTab] = useState<string>("");
 
   const handleDropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedTab = event.target.value;
-    // Handle GitHub and Resume selections
+    setSelectedTab(selectedTab);
+  };
+
+  const handleDropdownBlur = () => {
+    // Handle GitHub and Resume selections when dropdown loses focus
     if (selectedTab === "GitHub") {
       window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
     } else if (selectedTab === "Resume") {
@@ -51,7 +47,7 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
             <div
               key={tab}
               className={activeTab === tab ? "nav_tab_active" : "nav_tab"}
-              onClick={() => handleTabClick(tab)}
+              onClick={() => setActiveTab(tab)}
             >
               {tab}
             </div>
@@ -62,7 +58,8 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
         <select
           className="dropdown-menu"
           onChange={handleDropdownChange}
-          value={activeTab}
+          onBlur={handleDropdownBlur}  // Trigger action when dropdown loses focus
+          value={selectedTab || activeTab}
         >
           <option value="" disabled>Select a page</option>
           {tabs.map((tab) => (
@@ -77,3 +74,4 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
 }
 
 export default NavigationBar;
+
