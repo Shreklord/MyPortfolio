@@ -1,4 +1,4 @@
-// import React, { useState } from "react";
+import React, { useState } from "react";
 
 type NavigationBarProps = {
   activeTab: string;
@@ -17,11 +17,15 @@ const tabs: string[] = [
 function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
   const handleTabClick = (tab: string) => {
     if (tab === "GitHub") {
-      // Open GitHub in a new tab
-      window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
+      // Open GitHub profile in a new tab
+      setTimeout(() => {
+        window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
+      }, 0); // Ensure it's handled properly as a user-initiated action
     } else if (tab === "Resume") {
-      // Open the resume PDF in a new tab
-      window.open("/Resume/Resume_Website.pdf", "_blank", "noopener,noreferrer");
+      // Open the Resume PDF in a new tab
+      setTimeout(() => {
+        window.open("/Resume/Resume_Website.pdf", "_blank", "noopener,noreferrer");
+      }, 0);
     } else {
       setActiveTab(tab);
     }
@@ -69,6 +73,5 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
 }
 
 export default NavigationBar;
-
 
 
