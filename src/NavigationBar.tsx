@@ -27,10 +27,23 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
     }
   };
 
+  // const handleDropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  //   const selectedTab = event.target.value;
+  //   handleTabClick(selectedTab); // Reuse the same tab click handler
+  // };
+
   const handleDropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedTab = event.target.value;
-    handleTabClick(selectedTab); // Reuse the same tab click handler
+  
+    if (selectedTab === "GitHub") {
+      window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
+    } else if (selectedTab === "Resume") {
+      window.open("/Resume/Resume_Website.pdf", "_blank", "noopener,noreferrer");
+    } else {
+      setActiveTab(selectedTab);
+    }
   };
+  
   return (
     <nav>
       <div className="nav_row">
