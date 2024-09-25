@@ -25,15 +25,13 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
   const handleDropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedTab = event.target.value;
   
-    setTimeout(() => {
-      if (selectedTab === "GitHub") {
-        window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
-      } else if (selectedTab === "Resume") {
-        window.open("/Resume/Resume_Website.pdf", "_blank", "noopener,noreferrer");
-      } else {
-        setActiveTab(selectedTab);
-      }
-    }, 100);  // Adding a small delay to ensure the event processes correctly on touch devices
+    if (selectedTab === "GitHub") {
+      window.location.href = "https://github.com/Shreklord"; // Use location.href for direct navigation
+    } else if (selectedTab === "Resume") {
+      window.location.href = "/Resume/Resume_Website.pdf"; // Direct link to the resume PDF
+    } else {
+      setActiveTab(selectedTab);
+    }
   };
 
   return (
