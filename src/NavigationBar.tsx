@@ -25,8 +25,7 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
   const handleDropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedTab = event.target.value;
   
-    // Handle touch events
-    const handleOpenTab = () => {
+    setTimeout(() => {
       if (selectedTab === "GitHub") {
         window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
       } else if (selectedTab === "Resume") {
@@ -34,15 +33,7 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
       } else {
         setActiveTab(selectedTab);
       }
-    };
-  
-    if ("ontouchstart" in window) {
-      // It's a touch device
-      handleOpenTab();
-    } else {
-      // It's not a touch device
-      handleOpenTab();
-    }
+    }, 100);  // Adding a small delay to ensure the event processes correctly on touch devices
   };
 
   return (
