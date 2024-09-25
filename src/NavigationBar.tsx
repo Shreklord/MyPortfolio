@@ -1,4 +1,4 @@
-// import React, { useState } from "react";
+import React, { useState } from "react";
 
 type NavigationBarProps = {
   activeTab: string;
@@ -15,17 +15,13 @@ const tabs: string[] = [
 ];
 
 function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
+  const [selectedTab, setSelectedTab] = useState<string>("");
+
   const handleTabClick = (tab: string) => {
     if (tab === "GitHub") {
-      // Open GitHub profile in a new tab
-      setTimeout(() => {
-        window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
-      }, 0); // Ensure it's handled properly as a user-initiated action
+      window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
     } else if (tab === "Resume") {
-      // Open the Resume PDF in a new tab
-      setTimeout(() => {
-        window.open("/Resume/Resume_Website.pdf", "_blank", "noopener,noreferrer");
-      }, 0);
+      window.open("/Resume/Resume_Website.pdf", "_blank", "noopener,noreferrer");
     } else {
       setActiveTab(tab);
     }
@@ -33,8 +29,17 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
 
   const handleDropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedTab = event.target.value;
-    // Trigger the same tab click handler for dropdown
-    handleTabClick(selectedTab);
+    setSelectedTab(selectedTab);
+  };
+
+  const handleDropdownClick = () => {
+    if (selectedTab === "GitHub") {
+      window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
+    } else if (selectedTab === "Resume") {
+      window.open("/Resume/Resume_Website.pdf", "_blank", "noopener,noreferrer");
+    } else if (selectedTab) {
+      setActiveTab(selectedTab);
+    }
   };
 
   return (
@@ -44,7 +49,7 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
           <h2 className="name_header">Anthony Goldhammer</h2>
           <div className="green_bar" />
         </div>
-        
+
         {/* Tabs row for larger screens */}
         <div className="tabs_row">
           {tabs.map((tab) => (
@@ -59,7 +64,12 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
         </div>
 
         {/* Dropdown for smaller screens */}
-        <select className="dropdown-menu" onChange={handleDropdownChange} value={activeTab}>
+        <select
+          className="dropdown-menu"
+          onChange={handleDropdownChange}
+          onClick={handleDropdownClick}
+          value={activeTab}
+        >
           <option value="" disabled>Select a page</option>
           {tabs.map((tab) => (
             <option key={tab} value={tab}>
@@ -73,5 +83,3 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
 }
 
 export default NavigationBar;
-
-
