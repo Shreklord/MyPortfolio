@@ -15,25 +15,28 @@ const tabs: string[] = [
 ];
 
 function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
-  const [selectedTab, setSelectedTab] = useState<string>(activeTab);
+  const [selectedTab, setSelectedTab] = useState<string>("");
 
   const handleDropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const newTab = event.target.value;
 
-    // Open GitHub or Resume in a new tab, only when specifically selected
+    // If GitHub or Resume is selected, open the link in a new tab
     if (newTab === "GitHub") {
       window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
     } else if (newTab === "Resume") {
       window.open("/Resume/Resume_Website.pdf", "_blank", "noopener,noreferrer");
     } else {
+      // For other tabs, just set the active tab
       setActiveTab(newTab);
     }
 
-    setSelectedTab(newTab); // Save the selected tab to state
+    // Save the selected tab to state
+    setSelectedTab(newTab);
   };
 
-  const resetDropdown = () => {
-    setSelectedTab(""); // Reset the dropdown so the user can select again
+  const handleDropdownClick = () => {
+    // Reset selectedTab to allow re-selection of the same link
+    setSelectedTab("");
   };
 
   return (
@@ -61,8 +64,8 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
         <select
           className="dropdown-menu"
           onChange={handleDropdownChange}
-          onClick={resetDropdown} // Reset dropdown to allow re-selection of the same item
-          value={selectedTab}
+          onClick={handleDropdownClick} // Reset the dropdown to allow the same selection
+          value={selectedTab || activeTab}
         >
           <option value="" disabled>Select a page</option>
           {tabs.map((tab) => (
@@ -77,4 +80,5 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
 }
 
 export default NavigationBar;
+
 
