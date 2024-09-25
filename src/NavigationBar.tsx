@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
 type NavigationBarProps = {
   activeTab: string;
@@ -15,30 +15,22 @@ const tabs: string[] = [
 ];
 
 function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
-  const [selectedTab, setSelectedTab] = useState<string>("");
-
-  const handleDropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const newTab = event.target.value;
-
-    // If GitHub or Resume is selected, open the link in a new tab
-    if (newTab === "GitHub") {
+  const handleTabClick = (tab: string) => {
+    if (tab === "GitHub") {
+      // Open GitHub profile in a new tab
       window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
-    } else if (newTab === "Resume") {
+    } else if (tab === "Resume") {
+      // Open the PDF file in a new tab
       window.open("/Resume/Resume_Website.pdf", "_blank", "noopener,noreferrer");
     } else {
-      // For other tabs, just set the active tab
-      setActiveTab(newTab);
+      setActiveTab(tab);
     }
-
-    // Save the selected tab to state
-    setSelectedTab(newTab);
   };
 
-  const handleDropdownClick = () => {
-    // Reset selectedTab to allow re-selection of the same link
-    setSelectedTab("");
+  const handleDropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedTab = event.target.value;
+    handleTabClick(selectedTab); // Reuse the same tab click handler
   };
-
   return (
     <nav>
       <div className="nav_row">
@@ -46,27 +38,21 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
           <h2 className="name_header">Anthony Goldhammer</h2>
           <div className="green_bar" />
         </div>
-
+        
         {/* Tabs row for larger screens */}
         <div className="tabs_row">
           {tabs.map((tab) => (
             <div
               key={tab}
               className={activeTab === tab ? "nav_tab_active" : "nav_tab"}
-              onClick={() => setActiveTab(tab)}
+              onClick={() => handleTabClick(tab)}
             >
               {tab}
             </div>
           ))}
         </div>
-
         {/* Dropdown for smaller screens */}
-        <select
-          className="dropdown-menu"
-          onChange={handleDropdownChange}
-          onClick={handleDropdownClick} // Reset the dropdown to allow the same selection
-          value={selectedTab || activeTab}
-        >
+        <select className="dropdown-menu" onChange={handleDropdownChange} value={activeTab}>
           <option value="" disabled>Select a page</option>
           {tabs.map((tab) => (
             <option key={tab} value={tab}>
@@ -80,5 +66,3 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
 }
 
 export default NavigationBar;
-
-
