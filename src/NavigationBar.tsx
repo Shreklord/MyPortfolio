@@ -17,8 +17,10 @@ const tabs: string[] = [
 function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
   const handleTabClick = (tab: string) => {
     if (tab === "GitHub") {
+      // Open GitHub in a new tab
       window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
     } else if (tab === "Resume") {
+      // Open the resume PDF in a new tab
       window.open("/Resume/Resume_Website.pdf", "_blank", "noopener,noreferrer");
     } else {
       setActiveTab(tab);
@@ -27,18 +29,8 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
 
   const handleDropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedTab = event.target.value;
-
-    if (selectedTab === "GitHub") {
-      setTimeout(() => {
-        window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
-      }, 0); // Ensure this runs properly
-    } else if (selectedTab === "Resume") {
-      setTimeout(() => {
-        window.open("/Resume/Resume_Website.pdf", "_blank", "noopener,noreferrer");
-      }, 0); // Ensure this runs properly
-    } else {
-      setActiveTab(selectedTab);
-    }
+    // Trigger the same tab click handler for dropdown
+    handleTabClick(selectedTab);
   };
 
   return (
@@ -48,7 +40,7 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
           <h2 className="name_header">Anthony Goldhammer</h2>
           <div className="green_bar" />
         </div>
-
+        
         {/* Tabs row for larger screens */}
         <div className="tabs_row">
           {tabs.map((tab) => (
@@ -77,4 +69,6 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
 }
 
 export default NavigationBar;
+
+
 
