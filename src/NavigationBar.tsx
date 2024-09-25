@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+//import React, { useState } from "react";
 
 type NavigationBarProps = {
   activeTab: string;
@@ -15,8 +15,6 @@ const tabs: string[] = [
 ];
 
 function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
-  const [selectedTab, setSelectedTab] = useState<string>("");
-
   const handleTabClick = (tab: string) => {
     if (tab === "GitHub") {
       window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
@@ -29,16 +27,13 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
 
   const handleDropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedTab = event.target.value;
-    setSelectedTab(selectedTab);
-  };
-
-  const handleDropdownClick = () => {
+    // Handle GitHub and Resume selections
     if (selectedTab === "GitHub") {
       window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
     } else if (selectedTab === "Resume") {
       window.open("/Resume/Resume_Website.pdf", "_blank", "noopener,noreferrer");
-    } else if (selectedTab) {
-      setActiveTab(selectedTab);
+    } else {
+      setActiveTab(selectedTab);  // Set the active tab for internal navigation
     }
   };
 
@@ -67,7 +62,6 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
         <select
           className="dropdown-menu"
           onChange={handleDropdownChange}
-          onClick={handleDropdownClick}
           value={activeTab}
         >
           <option value="" disabled>Select a page</option>
