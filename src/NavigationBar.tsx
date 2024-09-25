@@ -1,4 +1,4 @@
-// import React, { useState } from "react";
+import React from "react";
 
 type NavigationBarProps = {
   activeTab: string;
@@ -16,25 +16,16 @@ const tabs: string[] = [
 
 function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
   const handleTabClick = (tab: string) => {
-    if (tab === "GitHub") {
-      // Open GitHub profile in a new tab
-      window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
-    } else if (tab === "Resume") {
-      // Open the PDF file in a new tab
-      window.open("/Resume/Resume_Website.pdf", "_blank", "noopener,noreferrer");
-    } else {
+    // Handle non-link tabs by setting active tab
+    if (tab !== "GitHub" && tab !== "Resume") {
       setActiveTab(tab);
     }
   };
 
-  // const handleDropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-  //   const selectedTab = event.target.value;
-  //   handleTabClick(selectedTab); // Reuse the same tab click handler
-  // };
-
   const handleDropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedTab = event.target.value;
-  
+
+    // Handle dropdown changes for GitHub and Resume with direct navigation
     if (selectedTab === "GitHub") {
       window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
     } else if (selectedTab === "Resume") {
@@ -43,7 +34,7 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
       setActiveTab(selectedTab);
     }
   };
-  
+
   return (
     <nav>
       <div className="nav_row">
@@ -51,19 +42,34 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
           <h2 className="name_header">Anthony Goldhammer</h2>
           <div className="green_bar" />
         </div>
-        
+
         {/* Tabs row for larger screens */}
         <div className="tabs_row">
-          {tabs.map((tab) => (
-            <div
-              key={tab}
-              className={activeTab === tab ? "nav_tab_active" : "nav_tab"}
-              onClick={() => handleTabClick(tab)}
-            >
-              {tab}
-            </div>
-          ))}
+          {tabs.map((tab) =>
+            tab === "GitHub" || tab === "Resume" ? (
+              // For GitHub and Resume, use <a> tags
+              <a
+                key={tab}
+                href={tab === "GitHub" ? "https://github.com/Shreklord" : "/Resume/Resume_Website.pdf"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav_tab" // Apply same style as other tabs
+              >
+                {tab}
+              </a>
+            ) : (
+              // For other tabs, use div with click handler
+              <div
+                key={tab}
+                className={activeTab === tab ? "nav_tab_active" : "nav_tab"}
+                onClick={() => handleTabClick(tab)}
+              >
+                {tab}
+              </div>
+            )
+          )}
         </div>
+
         {/* Dropdown for smaller screens */}
         <select className="dropdown-menu" onChange={handleDropdownChange} value={activeTab}>
           <option value="" disabled>Select a page</option>
