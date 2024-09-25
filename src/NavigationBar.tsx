@@ -24,14 +24,24 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
 
   const handleDropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedTab = event.target.value;
-
-    // Handle dropdown changes for GitHub and Resume with direct navigation
-    if (selectedTab === "GitHub") {
-      window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
-    } else if (selectedTab === "Resume") {
-      window.open("/Resume/Resume_Website.pdf", "_blank", "noopener,noreferrer");
+  
+    // Handle touch events
+    const handleOpenTab = () => {
+      if (selectedTab === "GitHub") {
+        window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
+      } else if (selectedTab === "Resume") {
+        window.open("/Resume/Resume_Website.pdf", "_blank", "noopener,noreferrer");
+      } else {
+        setActiveTab(selectedTab);
+      }
+    };
+  
+    if ("ontouchstart" in window) {
+      // It's a touch device
+      handleOpenTab();
     } else {
-      setActiveTab(selectedTab);
+      // It's not a touch device
+      handleOpenTab();
     }
   };
 
