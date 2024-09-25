@@ -15,22 +15,25 @@ const tabs: string[] = [
 ];
 
 function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
-  const [selectedTab, setSelectedTab] = useState<string>("");
+  const [selectedTab, setSelectedTab] = useState<string>(activeTab);
 
   const handleDropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedTab = event.target.value;
-    setSelectedTab(selectedTab);
-  };
+    const newTab = event.target.value;
 
-  const handleDropdownBlur = () => {
-    // Handle GitHub and Resume selections when dropdown loses focus
-    if (selectedTab === "GitHub") {
+    // Open GitHub or Resume in a new tab, only when specifically selected
+    if (newTab === "GitHub") {
       window.open("https://github.com/Shreklord", "_blank", "noopener,noreferrer");
-    } else if (selectedTab === "Resume") {
+    } else if (newTab === "Resume") {
       window.open("/Resume/Resume_Website.pdf", "_blank", "noopener,noreferrer");
     } else {
-      setActiveTab(selectedTab);  // Set the active tab for internal navigation
+      setActiveTab(newTab);
     }
+
+    setSelectedTab(newTab); // Save the selected tab to state
+  };
+
+  const resetDropdown = () => {
+    setSelectedTab(""); // Reset the dropdown so the user can select again
   };
 
   return (
@@ -58,8 +61,8 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
         <select
           className="dropdown-menu"
           onChange={handleDropdownChange}
-          onBlur={handleDropdownBlur}  // Trigger action when dropdown loses focus
-          value={selectedTab || activeTab}
+          onClick={resetDropdown} // Reset dropdown to allow re-selection of the same item
+          value={selectedTab}
         >
           <option value="" disabled>Select a page</option>
           {tabs.map((tab) => (
