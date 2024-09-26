@@ -550,19 +550,40 @@ body{
   .home_row {
     overflow-y: auto; /* Enable vertical scrolling when the content overflows */
     overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     margin-left: 1vw;
+    margin-right: 1vw;
+
+  }
+  .home_column{
+    flex: 1; /* Distributes available space equally between columns */
+    max-width: 80%; /* Ensures each column doesn’t exceed half the row's width */
+    box-sizing: border-box; /* Includes padding and borders within the column width */
+    align-items: center;
+    justify-content: center;
+    padding-left: 0%;
+    text-align: left;
+  }
+  .home_column2{
+    flex: 1; /* Distributes available space equally between columns */
+  max-width: 50%; /* Ensures each column doesn’t exceed half the row's width */
+  box-sizing: border-box; /* Includes padding and borders within the column width */
+  }
+  .goldhammer_image{
+    width: 50vw;
+    height: 55vw;
   }
   
   .experience_button{
     width: 50vw;
     
-    
   }
   .home_header1{
     font-size: 4vw;
     overflow-wrap: break-word; 
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
   }
   .home_text1{
     font-size: 4vw;
@@ -679,7 +700,7 @@ body{
 @media (min-width: 1000px){
   /* Home Content */
   .home_row{
-    flex-direction: row;
+    flex-direction: row !important;
   }
   .home_header1{
     font-size: 3vw;
@@ -939,8 +960,23 @@ body{
 
 @media (max-width: 932px) and (orientation: landscape) {
   .home_row {
-    padding-top: 200vh;
-    padding-bottom: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .home_column{
+    flex: 1; /* Distributes available space equally between columns */
+    max-width: 80%; /* Ensures each column doesn’t exceed half the row's width */
+    box-sizing: border-box; /* Includes padding and borders within the column width */
+    align-items: center;
+    justify-content: center;
+    padding-left: 0%;
+    text-align: left;
+  }
+  .home_column2{
+    flex: 1; /* Distributes available space equally between columns */
+  max-width: 50%; /* Ensures each column doesn’t exceed half the row's width */
+  box-sizing: border-box; /* Includes padding and borders within the column width */
   }
   .about_me_row {
     padding-top: 200vh;
