@@ -70,6 +70,7 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
         </div>
 
         {/* Dropdown for smaller screens */}
+        <div className="dropdown-menu-container">
         <select className="dropdown-menu" onChange={handleDropdownChange} value={activeTab}>
           <option value="" disabled>Select a page</option>
           {tabs.map((tab) => (
@@ -78,6 +79,7 @@ function NavigationBar({ activeTab, setActiveTab }: NavigationBarProps) {
             </option>
           ))}
         </select>
+        </div>
       </div>
     </nav>
   );

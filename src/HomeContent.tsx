@@ -14,6 +14,7 @@ function HomeContent({ setActiveTab }: HomeContentProps) {
           Based out of Fort Mill, South Carolina.
         </h2>
         <h2 className="home_text2">Lets get Started.</h2>
+        <div className="experience_button_container">
         <button
           className="experience_button"
           type="button"
@@ -23,6 +24,7 @@ function HomeContent({ setActiveTab }: HomeContentProps) {
         >
           Experience
         </button>
+        </div>
       </div>
       <div className="home_column2">
         <img className="goldhammer_image"
