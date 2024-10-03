@@ -538,7 +538,7 @@ body{
     font-size: 6vw;
   }
   .experience_title1,.experience_title2,.experience_title3{
-    font-size: 3vw;
+    font-size: 4.5vw;
     margin: 0;
     padding: 0;
     margin-top: 8vw;
@@ -548,29 +548,34 @@ body{
     margin: 0;
   }
   .experience_spencers1{
-    font-size: 3vw;
+    font-size: 4.2vw;
     margin: 0;
     padding: 0;
     margin-left: 4vw;
   }
 
   .experience_sclpt1,.experience_sclpt2,.experience_sclpt3,.experience_sclpt4{
-    font-size: 3vw;
+    font-size: 4.2vw;
     margin: 0;
     padding: 0;
     margin-left: 4vw;
   }
   .experience_uofsc1{
-    font-size: 3vw;
+    font-size: 4.2vw;
     margin: 0;
     padding: 0;
     margin-left: 4vw;
   }
 
   /* Contact */
+  .contact_column{
+    max-height: 85vh;
+    min-width: 60%;
+  }
   .contact_header{
-    margin-right: 40vw;
-    margin-bottom: 5vh;
+    /* margin-right: 40vw;
+    margin-bottom: 5vh; */
+    min-width: 80%;
     font-size: 8vw;
     padding: 0;
   }
@@ -578,7 +583,7 @@ body{
     padding: 0;
   }
   .icon {
-    font-size: 20vw;
+    font-size: 15vw;
     justify-content: center;
     align-items: center;
   }
@@ -601,6 +606,12 @@ body{
 
   .tabs_row {
     display: flex; /* Show the tabs */
+  }
+  .nav_tab{
+    font-size: 2vw;
+  }
+  .nav_tab_active{
+    font-size: 2vw;
   }
   /* * {
     box-sizing: border-box;
@@ -748,6 +759,7 @@ body{
   } 
   .experience_row{
     flex-direction: column;
+    margin-bottom: 32px;
   }
   .experience_row_header{
     margin: 0;
@@ -761,7 +773,9 @@ body{
     font-size: 3vw;
     margin: 0;
     padding: 0;
-    margin-top: 8vw;
+    margin-top: 4vw;
+    margin-bottom: 2vw;
+    justify-content: center;
   }
   .experience_column1,.experience_column2,.experience_column3{
     padding: 0;
@@ -789,13 +803,17 @@ body{
 
   /* Contact */
   .contact_header{
-    margin-right: 40vw;
-    margin-bottom: 5vh;
+    /* margin-right: 40vw;
+    margin-bottom: 5vh; */
+    min-width: 60vw;
     font-size: 8vw;
     padding: 0;
   }
   .contact_row{
     padding: 0;
+    margin: 0;
+    align-content: center;
+    justify-content: center;
   }
   .icon {
     font-size: 20vw;
@@ -872,14 +890,15 @@ body{
   }
   /* Experience */
   .experience_border{
-    margin-left: 5vw;
+    /* margin-left: 5vw; */
   }
   .experience_row{
-    margin-left: 12vw;
+    margin-left: 32px;
+
     flex-direction: row;
     overflow: hidden;
-    margin-left: 0vw;
-    margin-right: 0vw;
+   
+    /* margin-right: 32px; */
     overflow-y: auto;
     white-space: normal; /* Allow text to wrap */
     word-wrap: break-word; /* Ensure long words are broken and wrap to the next line */
@@ -928,7 +947,7 @@ body{
   .contact_header{
     margin-right: 40vw;
     margin-bottom: 5vh;
-    font-size: 8vw;
+    font-size: 5vw;
     padding: 0;
   }
   .contact_row{
@@ -948,12 +967,16 @@ body{
     box-sizing: border-box;
   }
   .icon {
-    font-size: 20vw;
+    font-size: 15vw;
+    
     justify-content: center;
     align-items: center;
   }
   .icons {
     flex-direction: row !important;
+    gap: 5vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
     justify-content: center;
     align-items: center;
   }
@@ -1037,7 +1060,7 @@ body{
   }
   /* Contact */
   .contact_header{
-    font-size: 3vw;
+    font-size: 4vw;
     /* position: relative;
     right: 5vw;  */
     overflow: visible;
@@ -1053,39 +1076,52 @@ body{
     
   }
   .icon {
-    font-size: 10vw;
+    font-size: 15vw;
   }
   .icons {
     gap: 5vw;
-    margin-left: 1vw;
-    margin-right: 1vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
   }
   /* Experience */
   .experience_border{
-   
+   max-width: 90%;
+   align-content: center;
+   justify-content: center;
   }
   .experience_row{
-   
+   justify-content: center;
+   align-content: center;
+   gap:32px;
   }
   .experience_row_header{
    
   }
   .expereince_header1{
-    font-size: 2vw;
+    font-size: 3vw;
   }
   .experience_title1,.experience_title2,.experience_title3{
-   font-size: 1.5vw;
+   font-size: 2vw;
+   padding: 0;
+   margin: 0;
+   text-align: flex-start;
+   justify-content: center;
   }
 
   .experience_spencers1{
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
 
   .experience_sclpt1,.experience_sclpt2,.experience_sclpt3,.experience_sclpt4{
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
   .experience_uofsc1{
-    font-size: 1.5vw;
+    font-size: 2vw;
+  }
+  .experience_column1,.experience_column2,.experience_column3{
+    align-content: center;
+    justify-content: flex-start;
+    
   }
 }
 
@@ -1148,19 +1184,62 @@ body{
     height:10vw;
     font-size: 3vw;
   }
+  .experience_border{
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .expereince_header1{
+    margin: 0;
+    padding: 0;
+    font-size: 3vw;
+  }
+  .experience_row_header{
+    padding: 0;
+    margin-bottom: 16px;
+  }
+  .experience_column1,.experience_column2,.experience_column3{
+    padding: 0;
+    margin: 0;
+  }
+  .experience_title1,.experience_title2,.experience_title3{
+    font-size: 2vw;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+  .experience_sclpt1,.experience_sclpt2,.experience_sclpt3,.experience_sclpt4{
+    font-size: 2vw;
+    padding: 0;
+    margin: 0;
+    margin-left: 16px;
+    
+  }
+  .experience_uofsc1{
+    font-size: 2vw;
+    padding: 0;
+    margin: 0;
+    margin-left: 16px;
+  }
+  .experience_spencers1,.experience_spencers2,.experience_spencers3{
+    font-size: 2vw;
+    padding: 0;
+    margin: 0;
+    margin-left: 16px;
+  }
 
   /* .about_me_row {
     padding-top: 200vh;
     padding-bottom: 20vh;
   } */
-  .experience_border{
+  /* .experience_border{
     padding-top: 190vh;
     padding-bottom: 20vh;
-  }
-  .contact_column{
+  } */
+  /* .contact_column{
     padding-top: 120vh;
     padding-bottom: 20vh;
-  }
+  } */
   .icons{
     flex-direction: row !important;
   }
@@ -1215,6 +1294,24 @@ body{
     overflow-y: visible;
     box-sizing: border-box;
   }
+  .contact_header{
+    padding: 0;
+    margin: 0;
+    font-size: 4vw;
+  }
+  .contact_row{
+    padding: 0;
+    margin: 0;
+    min-width: 80vw;
+  }
+  .icons{
+    justify-content: center;
+    align-content: center;
+    gap: 5vw;
+  }
+  .icon{
+    font-size: 12vw;
+  }
  
   
   .main-background {
@@ -1245,5 +1342,8 @@ body{
   }
   .experience_button{
     font-size: 2.5vw;
+  }
+  .icon{
+    /* font-size: 40vw; */
   }
 }
