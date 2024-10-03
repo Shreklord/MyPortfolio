@@ -5,12 +5,13 @@ html {
   height: 100%;
   overflow-x: hidden; /* Ensures no horizontal overflow */
  
-  background: url('/src/assets/Images/Wave.png') 50% 0 repeat-y;
+  background: url('/src/assets/Images/Wave.png') 50% 0;
   
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; 
+  background-attachment: fixed; /* Ensures the background stays fixed during scrolling */
 }
 
 body{
@@ -608,10 +609,10 @@ body{
     display: flex; /* Show the tabs */
   }
   .nav_tab{
-    font-size: 2vw;
+    font-size: 1.9vw;
   }
   .nav_tab_active{
-    font-size: 2vw;
+    font-size: 1.9vw;
   }
   /* * {
     box-sizing: border-box;
@@ -720,16 +721,37 @@ body{
     flex-direction: column;
     overflow: hidden;
     margin-left: 0vw;
+    max-height: 100vw;
     margin-right: 0vw;
     overflow-y: auto;
     white-space: normal; /* Allow text to wrap */
     word-wrap: break-word; /* Ensure long words are broken and wrap to the next line */
     overflow-wrap: break-word;
     box-sizing: border-box;
+    justify-content: center;
+    align-content: center;
     /* padding-top: 15vh; */
   }
   .about_me_column{
-    padding-left: 4vw;
+    justify-content: center;
+    align-content: center;
+    flex-grow: 1;             /* Allow text to grow and take up as much space as possible */
+    flex-shrink: 1;
+    max-width: 90vw;
+    height: 50vh;
+  }
+  .about_me_column2{
+    flex-shrink: 1;           /* Allow the image container to shrink */
+    flex-grow: 0;     
+    /* height: 50vh; */
+    max-height: 50vh;
+  }
+  .about_me_image{
+    max-height: 25vh;
+    max-width: 25vw;
+    
+    flex-shrink: 1;           /* Allow the image container to shrink */
+    flex-grow: 0;
   }
   .aboutme_header1{
     margin-top: 10vh;
@@ -743,6 +765,7 @@ body{
     width: 50vw;
     height: 60vw;
     border-width: 3vw;
+    
   }
   /* Experience */
   .experience_border{
@@ -802,6 +825,9 @@ body{
   }
 
   /* Contact */
+  .contact_column{
+    max-height: 85vh;
+  }
   .contact_header{
     /* margin-right: 40vw;
     margin-bottom: 5vh; */
