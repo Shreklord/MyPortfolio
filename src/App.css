@@ -183,7 +183,7 @@ body{
 
 .about_me_column{
   flex: 1;
-  padding-left: 60px;
+  /* padding-left: 60px; */
   width: auto;
   display: flex;
   flex-direction: column;
@@ -257,9 +257,9 @@ body{
 
 .aboutme_header1 {
   margin: 0px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   font-size: 60px;
-  padding-bottom: 15px;
+  padding-bottom: 16px;
   color: white;
 }
 
@@ -478,28 +478,35 @@ body{
 
   /* About Me */
   .about_me_row{
-    margin-left: 12vw;
+    /* margin-left: 12vw; */
     flex-direction: column;
-    overflow: hidden;
+    overflow-x: hidden;
     margin-left: 0vw;
+    width: 100vw;
+    justify-content: center;
+    align-content: center;
     margin-right: 0vw;
     overflow-y: auto;
     white-space: normal; /* Allow text to wrap */
     word-wrap: break-word; /* Ensure long words are broken and wrap to the next line */
     overflow-wrap: break-word;
     box-sizing: border-box;
+    
     /* padding-top: 15vh; */
   }
   .about_me_column{
-    padding-left: 4vw;
+    justify-content: flex-end;
+    max-width: 90%;
+    /* padding-left: 4vw; */
   }
   .aboutme_header1{
-    margin-top: 10vh;
-    font-size: 5vw;
+    text-align: center;
+    font-size: 2.8vh;
     
   }
   .about_me_text1{
-    font-size: 3vw;
+    text-align: center;
+    font-size: 1.8vh;
   }
   .about_me_image{
     width: 50vw;
@@ -850,7 +857,7 @@ body{
     padding-left: 4vw;
   }
   .aboutme_header1{
-    margin-top: 10vh;
+    margin-top: 0;
     font-size: 3vw;
     margin-bottom: 0;
     
@@ -1016,12 +1023,12 @@ body{
   }
   .aboutme_header1{
     margin-top: 10vh;
-    font-size: 2vw;
+    font-size: 3vw;
     margin-bottom: 0;
     
   }
   .about_me_text1{
-    font-size: 1.3vw;
+    font-size: 2vw;
   }
   .about_me_image{
     width: 25vw;
@@ -1142,10 +1149,10 @@ body{
     font-size: 3vw;
   }
 
-  .about_me_row {
+  /* .about_me_row {
     padding-top: 200vh;
     padding-bottom: 20vh;
-  }
+  } */
   .experience_border{
     padding-top: 190vh;
     padding-bottom: 20vh;
@@ -1157,7 +1164,58 @@ body{
   .icons{
     flex-direction: row !important;
   }
-  
+  .aboutme_header1{
+    font-size: 3vw;
+    margin: 0;
+    padding: 4px;
+    padding-top: 16px;
+    margin-top: 5vh;
+    padding-left: 8px;
+    text-align: center;
+  }
+  .about_me_text1{
+    font-size: 2vw;
+    margin: 0;
+    padding: 4px;
+    /* margin-bottom: 5vh; */
+    padding-left: 8px;
+    text-align: center;
+    text-justify: center;
+  }
+  .about_me_image{
+    margin-top: 5vh;
+    justify-content: center;
+    align-content: center;
+    width: 25vw;
+    height: 30vw;
+  }
+  .about_me_column{
+    padding-left: 0px;
+    max-width: 50vw;
+    
+    justify-content: center;
+    align-content: center;
+    
+  }
+  .about_me_column2{
+    max-width: 50vw;
+    padding-top: 16px;
+    justify-content: center;
+    align-content: center;
+  }
+  .about_me_row{
+    margin: 0px;
+    position: relative;
+    top: 5vw;
+    padding-top: 10vh;
+    padding-bottom: 16vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    flex-grow: 1; /* Ensure content can expand */
+    overflow-y: visible;
+    box-sizing: border-box;
+  }
+ 
   
   .main-background {
     margin-left: 12vw;
@@ -1170,6 +1228,8 @@ body{
     word-wrap: break-word; /* Ensure long words are broken and wrap to the next line */
     overflow-wrap: break-word;
     box-sizing: border-box;
+    justify-content: center;
+    align-content: center;
   }
 }
 
