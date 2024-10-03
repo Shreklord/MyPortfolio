@@ -957,7 +957,7 @@ body{
     overflow: hidden;
     margin-left: 0vw;
     margin-right: 0vw;
-    overflow-y: visible;
+    overflow-y: hidden;
     white-space: normal; /* Allow text to wrap */
     word-wrap: break-word; /* Ensure long words are broken and wrap to the next line */
     overflow-wrap: break-word;
@@ -1094,6 +1094,15 @@ body{
 @media (max-width: 999px) and (orientation: landscape) {
   .tabs_row{
     gap: 4vw;
+  }
+  .name_header {
+    font-size: 2.5vw;
+  }
+  .nav_tab{
+    font-size: 2.5vw;
+  }
+  .nav_tab_active{
+    font-size: 2.5vw;
   }
   .home_row {
     display: flex;
