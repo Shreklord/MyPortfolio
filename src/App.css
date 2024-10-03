@@ -595,9 +595,9 @@ body{
   .tabs_row {
     display: flex; /* Show the tabs */
   }
-  * {
+  /* * {
     box-sizing: border-box;
-  }
+  } */
   /* Home Content */
   .home_row {
     overflow-y: hidden; /* Enable vertical scrolling when the content overflows */
@@ -621,16 +621,15 @@ body{
     word-wrap: break-word; /* Allow long words to break */
     overflow-wrap: break-word;
   }
-  .home_header1{
-    font-size: 6vw;
-  }
+
   .home_column{
     min-width: 80vw;
     flex: 1; /* Distributes available space equally between columns */
-    max-width: 80%; /* Ensures each column doesn’t exceed half the row's width */
+    max-width: 55%; /* Ensures each column doesn’t exceed half the row's width */
     box-sizing: border-box; /* Includes padding and borders within the column width */
-    align-items: left;
+    /* align-items: left; */
     justify-content: center;
+    align-content: right;
     word-wrap: break-word; /* Ensure long words are broken and wrapped */
     overflow-wrap: break-word;
     text-align: left;
@@ -638,7 +637,7 @@ body{
     padding-left: 0%;
     flex-wrap: wrap;
     flex-shrink: 1; /* Allow the column to shrink */
-  min-width: 200px; /* Ensure it doesn't shrink smaller than 200px */
+    min-width: 200px; /* Ensure it doesn't shrink smaller than 200px */
   }
   .home_column2{
     
@@ -1088,13 +1087,13 @@ body{
     gap: 4vw;
   }
   .name_header {
-    font-size: 2.5vw;
+    font-size: 2vw;
   }
   .nav_tab{
-    font-size: 2.5vw;
+    font-size: 2vw;
   }
   .nav_tab_active{
-    font-size: 2.5vw;
+    font-size: 2vw;
   }
   .home_row {
     display: flex;
