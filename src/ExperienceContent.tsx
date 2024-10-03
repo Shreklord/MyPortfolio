@@ -31,7 +31,7 @@ function ExperienceContent(){
         <div className="experience_column2">
             
             <h2 className="experience_title3">UofSC Projects (2023-2024)</h2>
-            <h3 className="experience_uofsc1"><FaJava color="#67d45e"/>  Java Website w/ JavaFX</h3>
+            <h3 className="experience_uofsc1"><FaJava color="#67d45e"/>  Java DataBase and Application w/ JavaFX</h3>
         </div>
         <div className="experience_column3">
             <h2 className="experience_title1">Spencers Warehouse (2020-2024)</h2>
