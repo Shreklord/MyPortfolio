@@ -1064,22 +1064,27 @@ body{
   }
   /* Contact */
   .contact_header{
-    margin-right: 40vw;
-    margin-bottom: 5vh;
+    
     font-size: 5vw;
+    margin: 0;
     padding: 0;
   }
   .contact_row{
     padding: 0;
+    max-width: 95vw;
+    align-items: start;
+    justify-content: start;
   }
   .contact_column{
     margin-left: 12vw;
     flex-direction: row;
-    overflow-y: hidden;
+    
     overflow-x: visible;
     margin-left: 0vw;
     margin-right: 0vw;
-    overflow-y: auto;
+    max-width: 95vw;
+    
+    overflow-y: visible;
     white-space: normal; /* Allow text to wrap */
     word-wrap: break-word; /* Ensure long words are broken and wrap to the next line */
     overflow-wrap: break-word;
