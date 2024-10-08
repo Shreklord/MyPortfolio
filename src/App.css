@@ -806,6 +806,8 @@ body{
   .experience_button{
     justify-content: center;  
     align-items: center; 
+    max-width: 40vw;
+    max-height: 10vh;
   }
   /* About Me */
   .about_me_row{
