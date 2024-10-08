@@ -675,7 +675,16 @@ body{
 @media (min-width: 601px) and (orientation: portrait) {
   /* Navigation Bar */
   .tabs_row {
-    gap: 5vw;
+    gap: 4vw;
+    padding: 0;
+    margin: 0;
+    align-content: center;
+    justify-content: center;
+  }
+  .nav_row{
+    padding: 0;
+    align-content: center;
+    justify-content: center;
   }
   .dropdown-menu {
     display: none !important; /* Hide the dropdown */
@@ -686,9 +695,16 @@ body{
   }
   .nav_tab{
     font-size: 1.9vw;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    
   }
   .nav_tab_active{
     font-size: 1.9vw;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
   }
   /* * {
     box-sizing: border-box;
@@ -793,10 +809,11 @@ body{
   }
   /* About Me */
   .about_me_row{
-    margin-left: 12vw;
+    /* margin-left: 12vw; */
     flex-direction: column;
     overflow-x: visible;
-    margin-left: 0vw;
+    margin-left: 2vw;
+    margin-bottom: 8vw;
     max-height: 100vw;
     margin-right: 0vw;
     overflow-y: visible;
@@ -806,6 +823,7 @@ body{
     box-sizing: border-box;
     justify-content: center;
     align-content: center;
+    flex-flow: wrap;
     /* padding-top: 15vh; */
   }
   .about_me_column{
@@ -814,17 +832,20 @@ body{
     flex-grow: 1;             /* Allow text to grow and take up as much space as possible */
     flex-shrink: 1;
     max-width: 90vw;
+    min-width: 50vw;
     height: 50vh;
+    
   }
   .about_me_column2{
     flex-shrink: 1;           /* Allow the image container to shrink */
     flex-grow: 0;     
     /* height: 50vh; */
     max-height: 50vh;
+    /* flex-flow: wrap; */
   }
   .about_me_image{
-    /* max-height: 25vh;
-    max-width: 25vw; */
+    max-height: 40vh;
+    max-width: 35vw;
     
     flex-shrink: 1;           /* Allow the image container to shrink */
     flex-grow: 0;
@@ -832,15 +853,18 @@ body{
   .aboutme_header1{
     margin-top: 10vh;
     font-size: 5vw;
+    text-align: center;
     
   }
   .about_me_text1{
     font-size: 3vw;
+    text-align: center;
   }
   .about_me_image{
     width: 50vw;
     height: 60vw;
     border-width: 3vw;
+    box-sizing: border-box;
     
   }
   /* Experience */
@@ -908,8 +932,9 @@ body{
     /* margin-right: 40vw;
     margin-bottom: 5vh; */
     min-width: 60vw;
-    font-size: 8vw;
+    font-size: 6vw;
     padding: 0;
+    text-align: center;
   }
   .contact_row{
     padding: 0;
@@ -918,7 +943,7 @@ body{
     justify-content: center;
   }
   .icon {
-    font-size: 20vw;
+    font-size: 10vh;
     justify-content: center;
     align-items: center;
   }
@@ -926,6 +951,7 @@ body{
     flex-direction: column !important;
     justify-content: center;
     align-items: center;
+    gap: 0vh;
   }
 }
 
@@ -1178,8 +1204,8 @@ body{
     font-size: 2vw;
   }
   .about_me_image{
-    width: 25vw;
-    height: 30vw;
+    width: 35vw;
+    height: 40vw;
     border-width: 3vw;
   }
   /* Contact */
