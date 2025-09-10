@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { CiInstagram, CiLinkedin, CiCloudOn } from "react-icons/ci";
 import { SiGmail } from "react-icons/si";
 import { BiCopy, BiCheck } from "react-icons/bi";
