@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+
+import { useEffect, useState } from "react";
+
 
 type HomeContentProps = {
   setActiveTab: (tab: string) => void;
