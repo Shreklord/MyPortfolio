@@ -1,49 +1,124 @@
-// import React, { useState } from "react";
-import { FaTruckLoading } from "react-icons/fa";
-import { FaHandPaper } from "react-icons/fa";
-import { FaBoxes } from "react-icons/fa";
+import React from "react";
+import {
+  FaTruckLoading,
+  FaHandPaper,
+  FaBoxes,
+  FaReact,
+  FaJava,
+} from "react-icons/fa";
 import { BsStack } from "react-icons/bs";
-import { FaReact } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { FaJava } from "react-icons/fa";
+import { SiTypescript, SiPostgresql } from "react-icons/si";
+import { BiCalendar, BiBuilding } from "react-icons/bi";
 
+function ExperienceContent() {
+  const experiences = [
+    {
+      id: 1,
+      title: "Software Development Intern",
+      company: "SCLPT",
+      period: "Summer 2024",
+      type: "Internship",
+      description:
+        "Worked on full-stack development projects using modern web technologies.",
+      skills: [
+        { name: "Full Stack Development", icon: <BsStack /> },
+        { name: "React", icon: <FaReact /> },
+        { name: "TypeScript", icon: <SiTypescript /> },
+        { name: "PostgreSQL", icon: <SiPostgresql /> },
+      ],
+      color: "var(--primary-green)",
+    },
+    {
+      id: 2,
+      title: "Computer Science Student",
+      company: "University of South Carolina",
+      period: "2023 - Present",
+      type: "Education",
+      description:
+        "Developing strong foundations in computer science and software engineering principles.",
+      skills: [
+        { name: "Java Development", icon: <FaJava /> },
+        { name: "Database Systems", icon: <SiPostgresql /> },
+        { name: "JavaFX Applications", icon: <FaJava /> },
+      ],
+      color: "var(--secondary-green)",
+    },
+    {
+      id: 3,
+      title: "Warehouse Associate",
+      company: "Spencer's",
+      period: "2020 - 2024",
+      type: "Employment",
+      description:
+        "Gained valuable experience in logistics, teamwork, and operational efficiency.",
+      skills: [
+        { name: "Loading Bay Operations", icon: <FaTruckLoading /> },
+        { name: "Order Picking", icon: <FaHandPaper /> },
+        { name: "Inventory Management", icon: <FaBoxes /> },
+      ],
+      color: "var(--dark-green)",
+    },
+  ];
 
-
-function ExperienceContent(){
-   
-
-    return (
+  return (
     <div className="experience_border">
-    <div className="experience_row_header">
-        <div>
-            <h1 className="expereince_header1">Experience</h1>
-        </div>
-    </div>
-    <div className="experience_row">
-        <div className="experience_column1">
-            <h2 className="experience_title2">SCLPT (Summer 2024, Intern)</h2>
-            <h3 className="experience_sclpt1"><BsStack color="#67d45e"/>   Full Stack Development</h3>
-            <h3 className="experience_sclpt2"><FaReact color="#67d45e"/>   React</h3>
-            <h3 className="experience_sclpt3"><SiTypescript color="#67d45e"/>   TypeScript</h3>
-            <h3 className="experience_sclpt4"><BiLogoPostgresql color="#67d45e"/>   Postgresql</h3>
-        </div>
-        <div className="experience_column2">
-            
-            <h2 className="experience_title3">UofSC Projects (2023-2024)</h2>
-            <h3 className="experience_uofsc1"><FaJava color="#67d45e"/>  Java DataBase and Application w/ JavaFX</h3>
-        </div>
-        <div className="experience_column3">
-            <h2 className="experience_title1">Spencers Warehouse (2020-2024)</h2>
-            <h3 className="experience_spencers1"><FaTruckLoading color="#67d45e"/>   Loading Bay</h3>
-            <h3 className="experience_spencers1"><FaHandPaper color="#67d45e"/>   Picker</h3>
-            <h3 className="experience_spencers1"><FaBoxes color="#67d45e"/>   Back Stock</h3>
-            
-        </div>
+      <div className="experience_row_header">
+        <h1 className="expereince_header1">Experience</h1>
+        <p className="experience_subtitle">
+          My journey through education, internships, and work experiences
+        </p>
+      </div>
 
+      <div className="experience_timeline">
+        {experiences.map((exp, index) => (
+          <div key={exp.id} className={`experience_card card-${index + 1}`}>
+            <div className="experience_card_header">
+              <div className="experience_meta">
+                <div
+                  className="experience_type"
+                  style={{ borderColor: exp.color }}
+                >
+                  {exp.type}
+                </div>
+                <div className="experience_period">
+                  <BiCalendar />
+                  {exp.period}
+                </div>
+              </div>
+              <h3 className="experience_card_title">{exp.title}</h3>
+              <div className="experience_company">
+                <BiBuilding />
+                {exp.company}
+              </div>
+            </div>
+
+            <div className="experience_card_body">
+              <p className="experience_description">{exp.description}</p>
+
+              <div className="experience_skills">
+                <h4 className="skills_subtitle">Key Skills & Technologies</h4>
+                <div className="skills_list">
+                  {exp.skills.map((skill, skillIndex) => (
+                    <div key={skillIndex} className="skill_item">
+                      <span className="skill_icon" style={{ color: exp.color }}>
+                        {skill.icon}
+                      </span>
+                      <span className="skill_name">{skill.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="experience_card_accent"
+              style={{ background: exp.color }}
+            ></div>
+          </div>
+        ))}
+      </div>
     </div>
-    </div>
-    );
+  );
 }
 
 export default ExperienceContent;
