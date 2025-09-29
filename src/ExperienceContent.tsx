@@ -1,4 +1,3 @@
-
 import {
   FaTruckLoading,
   FaHandPaper,
@@ -14,17 +13,20 @@ function ExperienceContent() {
   const experiences = [
     {
       id: 1,
-      title: "Software Development Intern",
+      title: "Software Development Software Engineer",
       company: "SCLPT",
-      period: "Summer 2024",
+      period: "Summer 2024 - Current",
       type: "Internship",
       description:
-        "Worked on full-stack development projects using modern web technologies.",
+        "Worked on full-stack development projects using modern web technologies. Built 20+ RestFul APIs and 20+ front end components.",
       skills: [
         { name: "Full Stack Development", icon: <BsStack /> },
         { name: "React", icon: <FaReact /> },
         { name: "TypeScript", icon: <SiTypescript /> },
         { name: "PostgreSQL", icon: <SiPostgresql /> },
+        { name: "RESTful APIs", icon: <BsStack /> },
+        { name: "API Development", icon: <BsStack /> },
+        { name: "Azure DevOps", icon: <BsStack /> },
       ],
       color: "var(--primary-green)",
     },
@@ -40,6 +42,8 @@ function ExperienceContent() {
         { name: "Java Development", icon: <FaJava /> },
         { name: "Database Systems", icon: <SiPostgresql /> },
         { name: "JavaFX Applications", icon: <FaJava /> },
+        { name: "Data Structures & Algorithms", icon: <FaJava /> },
+        { name: "Object-Oriented Programming", icon: <FaJava /> },
       ],
       color: "var(--secondary-green)",
     },
