@@ -9,7 +9,7 @@ function WorkContent() {
         <div className="project-featured-copy">
           <div className="project-meta"><span className="project-category">MOBILE · CAPSTONE</span><span>2025 — 2026</span></div>
           <h3>Synchro Mobile</h3>
-          <p className="project-description">A mobile platform built with a team of five. I led architecture, implementation, and code reviews, connecting the application to a tested, cloud-deployed backend.</p>
+          <p className="project-description">A mobile application used by two schools, built with a team of five. I led architecture, implementation, and code reviews, connecting the application to a tested, cloud-deployed backend.</p>
           <div className="project-outcomes"><div><h4>Technical leadership</h4><p>Architecture, implementation, and code reviews</p></div><div><h4>Delivery & validation</h4><p>Jest testing, Azure deployment, and TestFlight</p></div></div>
           <ul className="tags" aria-label="Synchro Mobile technologies"><li>Node.js</li><li>Jest</li><li>Azure</li><li>TestFlight</li></ul>
         </div>
